@@ -1,4 +1,3 @@
-
 header{
     width: 100%;
     height: 4rem;
@@ -17,6 +16,10 @@ header{
         secondary color : background: rgb(253, 157, 157)
     */
 }
+.logo h3{
+    font-weight: 700;
+}
+
 /*logo and nav-links*/
 .section-one{
     display: flex;
@@ -25,6 +28,14 @@ header{
 }
 .menu-section{
     margin-left: 2rem;
+}
+.login-btn{
+    padding: .5rem 1rem;
+    border: none;
+    background: var(--secondary-color);
+    color: #fff;
+    margin-right: 1rem;
+    border-radius: 1rem;
 }
 .menu-section ul{
     display: flex;
