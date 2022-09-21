@@ -1,0 +1,110 @@
+<section>
+    <div class="box">
+            <div class="row">
+                <div class="col-8">
+                    <div class="up-box">
+                        <div class="user-sec">     
+                            <div class="ch-info">
+                                <h3>Stella</h3>
+                                <p>Stella world</p>
+                            </div>
+                            <div class="ch-img">
+                                <img src=".//src/assets/profileimg.jpg" alt="">
+                            </div>
+                        </div>    
+                             <button (click)="showPopup(popup)" class="edit-button">edit</button>
+                    </div>
+                    <div class="lw-box">
+                        <p>No message request received !</p>
+                    </div>
+                    <!-- <div class="content">
+                        <h5>User Name{{userName}}</h5>
+                        <p>{{email}}</p>
+                    </div>
+                    <div class="search-bar-section">
+                        <div class="shape-section">
+                            <div class="shap">Category</div>
+                            <span></span>
+                        </div>
+                        <input type="text" placeholder="search channel">
+                        <button class="search-btn">Search</button>
+                    </div>     -->
+                <!-- search bar section     -->
+                    <!-- <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">channel Name</span>
+                        <input #Value type="text" class="form-control" placeholder="channel name" aria-label="Username" aria-describedby="basic-addon1">
+                        <i class="fa fa-search" (click)="sendit(Value.value)"></i>
+                    </div> -->
+                <!-- search bar section     -->
+                    <!-- <div class="button-section">
+                        <button class="btn vw-msg">view message</button>
+                        <button class="btn lc-cmp">launch campain</button>
+                    </iv> -->
+                </div>
+                <div class="col-4">
+                    <!-- user profile secton -->
+                    <div class="outer-box">
+                        <div class="upper-inner-box">
+                            <div class="profile-thumbnail">
+                                <img src=".//src/assets/profileimg.jpg" alt="">
+                            </div>       
+                            <h3 class="channel-name">Channel Name</h3>   
+                        </div>
+                      <div class="lower-inner-box">
+                            <div class="subscriber-box">
+                              Subscriber<h4>23.4k</h4>
+                            </div>
+                            <div class="video-count-box">
+                              videos<h4>234</h4>
+                            </div>
+                      </div>
+                   </div>
+
+
+
+                    <!-- user profile section -->
+                    <!-- <div class="show-profile-section">
+                        <div class="profile-pic">
+                            
+                        </div>
+                        <div class="channel-name">
+                                <span>{{userName}}</span>
+                        </div>
+                        <div class="second-box">
+                                <div class="subscriber-count">
+                                       subsribers<span> 23.4k</span>
+                                </div>
+                                <div class="posted-videos">
+                                            videos <span>176</span>
+                                </div>
+                         </div>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+
+                    <!-- popup code  -->
+                    <div #popup class="visibillity" (click)="diablepopup(popup)">
+                        <div class="inner-box">
+                            <div class="header">
+                                <h4>Enter channel info</h4>
+                            </div>
+                            <hr>
+                            <div class="content-area">
+                                <div class="ch-name">
+                                    <label for="">channel Name :</label>
+                                <input type="text" placeholder="enter you channel name">
+                                </div>
+                                <div class="select-ch">
+                                    <label for="">select channel :</label>
+                                <input type="text" placeholder="select channel">
+                                </div>
+                                <div class="cat">
+                                    <label for="">category :</label>
+                                <input type="text" placeholder="channel category">
+                                </div>
+                            </div>
+                            <button class="save-btn">save</button>
+                        </div>
+                    </div>
+</section>

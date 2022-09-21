@@ -1,0 +1,11 @@
+<div class="register-section">
+    <div class="content-section">
+        <h3>Login</h3>
+            <div class="form">
+                <input type="text" #email class="inp" placeholder="enter your email">
+                <input type="password" #password class="inp" placeholder="enter your password">
+                <label>New User</label>&nbsp;<span><a href="http://localhost:4200/register">Signup here</a></span>
+            </div>
+            <button class="btn btn-danger" (click)="loginMethod(email.value,password.value)">Login</button>
+    </div>
+</div>

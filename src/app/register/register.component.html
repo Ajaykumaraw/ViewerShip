@@ -1,0 +1,13 @@
+<div class="register-section">
+    <div class="content-box">
+        <h3>Register Now</h3>
+            <div class="form">
+                <input type="text" #username class="inp" placeholder="enter your namme">
+                <input type="text" #email class="inp" placeholder="enter your email">
+                <input type="password" #password class="inp" placeholder="enter your password">
+                <label>Already User</label>&nbsp;<span><a href="http://localhost:4200/login">login here</a></span>
+            </div>
+            <button (click)="getData(username.value,email.value,password.value)" 
+            routerLink="/user" class="btn btn-danger">Register</button>
+    </div>
+</div>
