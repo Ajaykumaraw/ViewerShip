@@ -1,11 +1,29 @@
 <div class="register-section">
+    <div class="isRegisted" *ngIf="isRegisted()">
+        <p>Resigtration successfull, please login to your account</p>
+    </div>
+
     <div class="content-section">
-        <h3>Login</h3>
-            <div class="form">
-                <input type="text" #email class="inp" placeholder="enter your email">
-                <input type="password" #password class="inp" placeholder="enter your password">
-                <label>New User</label>&nbsp;<span><a href="http://localhost:4200/register">Signup here</a></span>
+        <h3>Login in to Viewership</h3>
+            <div class="form" [formGroup]="LoginForm">
+                <div class="user-name">
+                    <label for="">User name :</label>
+                    <input type="text" #email class="inp" placeholder="User Name or Email"  formControlName="userName">
+                </div>
+                <div class="user-password">
+                    <label for="">Password :</label>
+                    <input type="password" #password class="inp" placeholder=" Password" formControlName="password">
+                </div>
             </div>
-            <button class="btn btn-danger" (click)="loginMethod(email.value,password.value)">Login</button>
+            <button class="btn btn-danger loginbtn" (click)="loginMethod()">Login</button>
+
+            <div class="new-register-section">
+                <div class="new-reg-content">
+                    <hr><label>Don't have Viewership account?</label><hr>
+                </div>
+                <div class="signup-button">
+                    <button class="sign-up-button" routerLink="/preregister">Sign Up</button>
+                </div>
+            </div>
     </div>
 </div>

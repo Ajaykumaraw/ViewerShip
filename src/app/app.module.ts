@@ -12,6 +12,9 @@ import { CommonModule } from '@angular/common';
 import { MKTHomeComponent } from './mkt-home/mkt-home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { PreRegisterComponent } from './pre-register/pre-register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 
 
 @NgModule({
@@ -23,12 +26,18 @@ import { FooterComponent } from './footer/footer.component';
     FlHomeComponent,
     MKTHomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PreRegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground:true,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

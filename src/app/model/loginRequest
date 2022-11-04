@@ -1,0 +1,4 @@
+export interface loginRequestData {
+   token:string;
+   userName:string;
+}

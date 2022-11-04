@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../model/user';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-mkt-home',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MKTHomeComponent implements OnInit {
 
-  constructor() { }
+  allUsers!: User;
+
+  constructor(private service:ServiceService) { }
 
   ngOnInit(): void {
+    // console.log(this.service.getData());
   }
-
 }

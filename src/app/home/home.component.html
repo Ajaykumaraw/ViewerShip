@@ -1,23 +1,23 @@
 <section>
     <div class="row">
-        <div class="col-6">
+        <div class="col-md-6">
             <div class="content">
                     <div class="heading">
-                        <h1>Let's make it<br> count</h1>
+                        <h1>Let's make it count</h1>
                     </div>
                     <div class="subheading">
-                        <h5>Forget the old rules. You can have <br>
+                        <h5>Forget the old rules. You can have
                         the best people Right now, Right here</h5>
                     </div>
                     <div class="home-btn">
-                        <button class="ch-btn">Find channel</button>
-                        <button class="li-btn">List channel</button>
+                        <button class="ch-btn" routerLink="/login">Find channel</button>
+                        <button class="li-btn" routerLink="/login">List channel</button>
                     </div>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 mx-auto">
             <div class="imag-container">
-                <img src=".//src/assets/homepageimg.png" alt="">
+                <img src=".//src/assets/homepageimg.png" alt="" class="img-fluid">
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@
     <div class="card-section">
         <div class="card-heading">
             <h3>Browse chennels by category</h3>
-            <p>Looking for channel listing <a href="">login for listing</a></p>
+            <p>Looking for channel listing <span routerLink="/login">login for listing</span></p>
         </div>
         <div class="cards">
             <div class="card1">
@@ -104,8 +104,5 @@
             </div>
         </div>    
     </div>
-
-<app-footer></app-footer>
-
-
+    <app-footer></app-footer>
 </section>

@@ -4,6 +4,7 @@ import { FlHomeComponent } from './fl-home/fl-home.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MKTHomeComponent } from './mkt-home/mkt-home.component';
+import { PreRegisterComponent } from './pre-register/pre-register.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'user',component:FlHomeComponent},
   {path:'marketer',component:MKTHomeComponent},
   {path:"home",component:HomeComponent},
+  {path:"preregister",component:PreRegisterComponent},
   {path:"",component:HomeComponent}
 ];
 

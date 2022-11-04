@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { User } from './model/user';
 import { LoginFields } from './model/loginFields'; 
+import { DataService } from './data.service';
+import { userLoginDetails } from './model/userLoginDetails';
+import { Observable, observable } from 'rxjs';
 
 
 @Injectable({
@@ -9,51 +12,38 @@ import { LoginFields } from './model/loginFields';
 })
 export class ServiceService {
 
-    baseUrl:string = 'http://localhost:8080/api/v1/student';
+    baseUrl:string = 'http://localhost:8080/register';
+    getUserName:string = 'http://localhost:8080/home/';
+    loginUrl:string = 'http://localhost:8080/api/v1/student/login';
     SendChannelUrl = 'http://localhost:8080/api/v1/urls/channelname/';
+    requestStatus!:number;
+    userName!:String;
 
     private userLogin:any;
-    userData: LoginFields = {email: "", password:""}; 
+    userLoginD: {Username:string;password:string}[] = [];
 
     i:number=0;
-  constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) {
+    console.log(this.userLoginD);
+   }
 
 
-  PostRequest(user:User){
-    this.http.post<User>(this.baseUrl,user).
-    subscribe(data =>{
-      alert("login successful")
-      console.log(data);
-    })
-  }
+    // PostRequest(user:User){
+    //   user.role = "USER";
+    //   return this.http.post<User>(this.baseUrl,user,{observe: 'response'}).
+    //   subscribe(response =>{
+    //   alert(response.body?.userName);
+    //   this.requestStatus = response.status;
+    //   console.log("in post request"+response.body+ " "+this.requestStatus);
+    //   })
+    // }
 
-  getData(){
-    return this.http.get(this.baseUrl);
-  }
-
-  getLogin(email:String,password:String){
-    this.http.get(this.baseUrl).subscribe(data =>{
-      this.userLogin = data;
-      console.log("befor for  each"+data);
-      this.userLogin.forEach((element:LoginFields) => {
-        console.log("value in "+element);
-        if(element.email === email && element.password === password){
-        alert("login successful");
-        } else alert("login notdone");
-        
-      });
-    })
-  }
-  sendChannelName(channel_name:String){
-    this.SendChannelUrl = this.SendChannelUrl;
-    console.log("in post method :"+this.SendChannelUrl);
-    this.http.post<String>(this.SendChannelUrl,channel_name).
-    subscribe(data =>{
-      console.log("in post method"+this.SendChannelUrl);
-      alert("channelname :"+data);
-      console.log(data);
-    })
-  }
+    PostRequest(user:User,role:boolean):Observable<any>{
+      if(role){
+        user.role = "asfl";
+      }else user.role = "asmkt";
+      return this.http.post<User>(this.baseUrl,user);
+    }
 
 
 }

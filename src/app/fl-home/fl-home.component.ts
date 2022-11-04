@@ -1,5 +1,8 @@
 import { Component, OnInit,Input, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 import { User } from '../model/user';
+import { userLoginDetails } from '../model/userLoginDetails';
 import { ServiceService } from '../service.service';
 
 @Component({
@@ -7,10 +10,12 @@ import { ServiceService } from '../service.service';
   templateUrl: './fl-home.component.html',
   styleUrls: ['./fl-home.component.css']
 })
+
+
 export class FlHomeComponent implements OnInit {
 
-  user:any;
-  userName:String = "";
+  userLoginD: {Username:string;password:string}[] = [];
+  userName:any;
   email:String = "";
   Value!:String;
   mathingItem!:any;
@@ -18,27 +23,27 @@ export class FlHomeComponent implements OnInit {
   channelList:string[] = ["softwoodcoder","durgasoftsolution","testycodies","easytutorias",
                            "ux trends","soft woodcoder","softsolution"
                           ];
+  activatedroute: any;
 
 
-  constructor(private service:ServiceService) {
-  //  this.service.getData().subscribe(data =>{
-  //     console.log(data);
-  //     this.user = data;
-  //     this.userName = this.user[0].name;
-  //     this.email = this.user[0].email;
-  //  })
-   }
+  constructor(private service:ServiceService,private userLoginDetail:DataService
+      ,private route: Router) {
+      console.log("in constructor"+this.userLoginD);
+  
+      }
 
    sendit(value:String){
-    this.mathingItem  = this.channelList.find(x => x === value);
-    this.service.sendChannelName(value);
-    console.log("Value : ",this.mathingItem+this.channelList.find(x => x.charAt(0) === value));
+    
  }
 
     setSelectedValue(){
       this.userName  = this.mathingItem;
     }
-  ngOnInit(): void {
+      ngOnInit(): void {
+        this.userName =  localStorage.getItem("uName");
+     //   alert("in constructor username"+this.userName);
+      // console.log("in oninit getmethod"+this.service.getUserDetails());
+      
   }
   showPopup(popup:HTMLElement){
     if(popup.className != "popup-box")

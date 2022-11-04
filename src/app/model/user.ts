@@ -1,6 +1,7 @@
 export interface User {
-     
-    name:String;
+    userName:string;
     email:String;
+    categor:String;
     password:String;
+    role:String;
 }
