@@ -13,6 +13,7 @@
     </div>      
       <div class="user-profile">
         <div class="login-bt">
+        <label class="profileUserName" for="">{{profileUserName}}</label>
           <button *ngIf="!loggedin()" class="login-btn" routerLink="login">Login</button>
           <button *ngIf="!loggedin()"  class="login-btn"routerLink="preregister" >signup</button>
           <button *ngIf="loggedin()"  class="login-btn" (click)="logout()">Logout</button>

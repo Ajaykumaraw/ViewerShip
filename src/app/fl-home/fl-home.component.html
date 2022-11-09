@@ -1,3 +1,85 @@
 <section>
-   
+   <div class="row">
+        <div class="col-md-2 flex-column colm-sidebar">
+           <div class="navigation">
+            <ul>
+                <li><i class="fa fa-home" aria-hidden="true"></i>Dashboard</li>
+                <li><i class="fa fa-commenting" aria-hidden="true"></i>Messages</li>
+                <li><i class="fa fa-user" aria-hidden="true"></i>Profile</li>
+                <li><i class="fa fa-question-circle" aria-hidden="true"></i>Help & support</li>
+            </ul>
+        
+           </div>
+            <!-- <div class="profile-box">
+                <div class="pfcover">
+                    <img src="./assets/pfbg.jpg" alt="bgcover">
+                </div>
+                <div class="pfimg"><img src="./assets/pf.png" class="pfimage" alt=""></div>
+                <div class="chname"><label for=""></label></div>
+            </div> -->
+        </div>
+        <div class="col flex-column colm-timeline">
+           <div class="title">{{userName}}
+            <div class="row">
+                <div class="col flex-column ti-sect">
+                    <div class="row ti-row">
+                        <div class="col-md-6 search-box-result" *ngIf="ischvsible">
+                            <label class="ch-name">Channel : {{chName}} </label>
+                               <label for=""></label>
+                                <div class="subscount">
+                                    <label for="">12.3k</label>
+                                </div>
+                                <div class="videosCount">
+                                    <label for="">180</label>
+                                </div>
+                                <div class="editbtn">
+                                   <button (click)="editMethod()">Edit</button>
+                                </div>
+                        </div>
+                        <div class="col-md-6 search-box" *ngIf="hideSearchBtn">
+                            <label class="ch-name">Channel Name</label>
+                            <mat-form-field>
+                                <input #chInput matInput type="text" class="ch-input">
+                            </mat-form-field>
+                            <button mat-raised-button (click)="openDialog(chInput.value)">Search Channel</button>
+                        </div>
+                         <!-- result list -->
+                        <div class="result-list" *ngIf="isvsible">
+                            <div class="list-loading" *ngFor="let chname of chResponse; let i = index" (click)="showChData(chname.snippet.channelId,chname.snippet.channelTitle)">
+                                <div class="thumb">
+                                    <!-- chname.snippet.thumbnails.default.url -->
+                                    <img class="imgthumb" src="{{chname.snippet.thumbnails.default.url}}"  alt="">
+                                </div>
+                                <!-- chname.snippet.channelTitle -->
+                                <label for="">{{i}} {{chname.snippet.channelTitle | titlecase}}</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
+            </div>
+           </div>
+            <div class="content-sec">
+                <div class="row">
+                    <div class="col-md-4 flex-column vd-sect"></div>
+                    <div class="col-md-4 flex-column vd-sect"></div>
+                    <div class="col-md-4 flex-column vd-sect"></div>
+                    <div class="col-md-4 flex-column vd-sect"></div>
+                    <div class="col-md-4 flex-column vd-sect"></div>
+                    <div class="col-md-4 flex-column vd-sect"></div>
+                    <div class="col-md-4 flex-column vd-sect"></div>
+                   <div class="col-md-4 flex-column vd-sect"></div>
+                   <div class="col-md-4 flex-column vd-sect"></div>
+                   <div class="col-md-4 flex-column vd-sect"></div>
+                   <div class="col-md-4 flex-column vd-sect"></div>
+                   <div class="col-md-4 flex-column vd-sect"></div>
+                   <div class="col-md-4 flex-column vd-sect"></div>
+                   <div class="col-md-4 flex-column vd-sect"></div>
+                  <div class="col-md-4 flex-column vd-sect"></div>
+                  <div class="col-md-4 flex-column vd-sect"></div>
+                </div>
+             </div>
+        </div>
+   </div>
 </section>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { loginRequestData } from '../model/loginRequestDetails';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,20 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router:Router) { }
+    profileUserName:string='';
+
+
+  constructor(private router:Router,private loginRequest:loginRequestData) { 
+    this.profileUserName = loginRequest.getUserName();
+    console.log(loginRequest.getUserName());
+
+  }
 
   ngOnInit(): void {
+    
   }
+
+  
 
   showLogout(divName:HTMLElement){
     if(divName.className != "showLogoutSection")
@@ -20,6 +31,7 @@ export class HeaderComponent implements OnInit {
   }
 
   loggedin(){
+     this.loginRequest.isLogged_In_get();
     return  localStorage.getItem('utoken');
   }
 
@@ -28,7 +40,8 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('utoken');
     localStorage.removeItem('uName');
     localStorage.removeItem('isRegistered');
-    localStorage.setItem("isLoggedIn","false");
+    this.loginRequest.isLogged_In_save(false);
+   // localStorage.setItem("isLoggedIn","false");
     this.router.navigate(['/login']);
   }
 }
