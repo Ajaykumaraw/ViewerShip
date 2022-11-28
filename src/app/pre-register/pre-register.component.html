@@ -1,0 +1,23 @@
+<section>
+    <div class="content">
+        <div class="heading">
+            <h1>Join As</h1>
+        </div>
+        <div class="selaction-box">
+            <div class="mkt-section" #mktsection (click)="mktsettag()">
+                <h5>Marketing official looking for
+                    channel to promot product</h5>
+            </div>
+            <div class="fl-section" #flsection (click)="flsettag()">
+                <h5>Channel holder for listing my channel</h5>
+            </div>
+        </div>
+        <div class="button">
+            <button class="diablebtn" #createbtn (click)="routeToRegister()">Create Account</button>
+        </div>
+        <div class="signup-sec">
+            <p>Already have an account?</p><span routerLink="/login">Log In</span>
+        </div>
+
+    </div>
+</section>

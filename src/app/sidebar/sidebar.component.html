@@ -1,0 +1,27 @@
+<section class="sidebar">
+    <div class="navigation">
+            <div class="profile-sect">
+                <div class="img-sec">
+                    <img class="profile-img" src=".//src/assets/cover4.jpg" alt="">
+                </div>
+                <div class="uname">
+                    <h5 style="font-weight: 700;">{{userName}}</h5>
+                    <p>{{userChName}}</p>
+                </div>
+            </div>
+            <ul>
+                <hr>
+                <li  (click)="gotoDashboard()" id="dashboard"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</li>
+                <li (click)="gotoMessage()" #nvlinks id="Messages"><i class="fa fa-commenting" aria-hidden="true"></i>Messages</li><hr>
+                <li  (click)="profile()" id="Profile"><i class="fa fa-user" aria-hidden="true"></i>Profile</li>
+                <li  #nvlinks id="h_and_p"><i class="fa fa-question-circle" aria-hidden="true"></i>Help & support</li>
+            </ul>
+    </div>
+        <!-- <div class="profile-box">
+            <div class="pfcover">
+                <img src="./assets/pfbg.jpg" alt="bgcover">
+            </div>
+            <div class="pfimg"><img src="./assets/pf.png" class="pfimage" alt=""></div>
+            <div class="chname"><label for=""></label></div>
+        </div> -->
+    </section>

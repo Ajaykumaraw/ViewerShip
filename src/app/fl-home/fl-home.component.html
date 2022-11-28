@@ -1,0 +1,61 @@
+<section>
+   <div class="row">
+    <div class="col-2" [ngClass]="{'col-2':item,'tgsidebar':!item}">
+        <div class="tg-btn" (click)="tgMenu()"[ngClass]="{'tg-btn':item,'tg-btn-op':!item}">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <app-sidebar [userName]="userName" [userChName]="userChName"></app-sidebar>
+    </div>
+        <div class="col flex-column colm-timeline">
+           <div class="title">
+            <div class="row">
+                <div class="col flex-column ti-sect">
+                    <div class="row ti-row">
+                        <div class="col-md-6 search-box-result" *ngIf="ischvsible">
+                            <label class="ch-name">Channel : {{chName}} </label>
+                               <label for=""></label>
+                                <div class="subscount">
+                                    <label for="">12.3k</label>
+                                </div>
+                                <div class="videosCount">
+                                    <label for="">180</label>
+                                </div>
+                                <div class="editbtn">
+                                   <button (click)="editMethod()">Edit</button>
+                                </div>
+                        </div>
+                        <div class="col-md-6 search-box" *ngIf="hideSearchBtn">
+                            <label class="ch-name">Channel Name</label>
+                            <mat-form-field>
+                                <input #chInput matInput type="text" class="ch-input">
+                            </mat-form-field>
+                            <button mat-raised-button (click)="openDialog(chInput.value)">Search Channel</button>
+                        </div>
+                         <!-- result list -->
+                        <div class="result-list" *ngIf="isvsible">
+                            <div class="list-loading" *ngFor="let chname of chResponse; let i = index" (click)="showChData(chname.snippet.channelId,chname.snippet.channelTitle)">
+                                <div class="thumb">
+                                    <!-- chname.snippet.thumbnails.default.url -->
+                                    <img class="imgthumb" src="{{chname.snippet.thumbnails.default.url}}"  alt="">
+                                </div>
+                                <!-- chname.snippet.channelTitle -->
+                                <label for="">{{i}} {{chname.snippet.channelTitle | titlecase}}</label>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
+            </div>
+           </div>
+            <div class="content-sec">
+                <div class="row vd-detail-sec">
+                    <div class="col-auto vd-sect" *ngFor="let chdetails of chDetailsResponse; let i = index">
+                        <img class="vid-thumb" src="{{chdetails.snippet.thumbnails.high.url}}" alt="">
+                        <label for="vd-title">{{chdetails.snippet.title | titlecase}}</label>
+                    </div>
+                </div>
+             </div>
+        </div>
+   </div>
+</section>

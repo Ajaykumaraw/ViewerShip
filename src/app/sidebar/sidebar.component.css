@@ -1,0 +1,67 @@
+.sidebar{
+    position: relative;
+    margin-top: 2rem;
+}
+.navigation ul{
+    width: 100%;
+    height: 5rem;
+    padding-left: 1rem;
+    width: 100%;
+}
+li{
+    width: 100%;
+    list-style: none;
+    padding: .5rem;
+    color: rgb(22, 18, 18);
+    cursor: pointer;
+}
+
+.navigation ul li:hover{
+    background: #aba3e4;
+    border-radius: .5rem;
+    color: rgb(19, 18, 18);
+}
+
+.fa{
+    margin-right: .5rem;
+    color: rgb(17, 4, 4);
+}
+.active-li{
+    color:  rgb(25, 23, 23);
+    font-style: bold;
+    font-weight: 700;
+    background: #eee;
+    border-radius: .5rem;
+}
+.profile-sect{
+    width: 100%;
+    height: 100%;
+    margin: 1rem .5rem;
+   text-align: center;
+   background:#fff;
+   border-radius: .5rem;
+   
+}
+.img-sec{
+    width: 100%;
+    height: 8rem;
+    overflow: hidden;
+    object-fit: cover;
+    display: flex;
+    margin: .3rem auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.profile-img{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    max-width:100%;
+    max-height:100%;
+    border-radius: 50%;
+}
+.uname h5{
+    margin: 1rem;
+    margin-bottom: 1rem;
+    line-height: 2.2;
+}

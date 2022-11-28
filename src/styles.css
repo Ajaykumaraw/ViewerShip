@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Nunito', sans-serif;
+}
+/*
+        primary color - color: rgb(60, 201, 182);
+        secondary color : background: rgb(253, 157, 157)
+    */
+:root{
+    --primary-color:rgb(57, 228, 205);
+    --secondary-color:rgb(236, 54, 54);
+}
+.button-btn{
+    border: none;
+    padding: 13px 22px;
+    border-radius: 5px;
+    margin: 1.6rem;
+    font-size: 18px;
+    background: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+}

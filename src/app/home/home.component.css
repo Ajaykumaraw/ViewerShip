@@ -1,0 +1,243 @@
+html{
+    font-size:62.5%;
+}
+section{
+    width: 100%;
+    height: 90vh;
+    background:#fff;
+}
+.col-6{
+    margin-top: 3rem;
+}
+.content{
+    margin: 2rem 4rem;
+    
+}
+.heading h1{
+    font-size: 5.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.subheading h5{
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    
+}
+.home-btn button{
+    padding: .5rem 1rem ;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    border-radius: 1rem;
+}
+.ch-btn{
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+}
+.li-btn{
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    background: #fff;
+}
+.home-btn button:hover{
+    cursor: pointer;
+}   
+.ch-btn:hover{
+    background: rgb(241, 103, 103);
+    color: #fff;
+    border: none;
+}
+.li-btn:hover{
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    background: rgb(235, 233, 233);
+}
+.imag-container{
+    margin: 1rem;
+}
+img{
+    margin-top: 2rem;
+    width: 100%;
+    bottom: 0;
+}
+/* card section */
+.card-section{
+    width:100%;
+    height: 50vh;
+    padding: 3rem 4.5rem;
+}
+.card-heading h3{
+    font-size: 2rem;
+}
+.card-heading span{
+    color: blue;
+    cursor: pointer;
+}
+.cards{
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.card1{
+    margin-top: 1rem;
+    width: 40%;
+    height: 15%;
+    padding: 2rem;
+    background: #eee;
+    margin-right: 1rem;
+    border-radius: 1rem;
+    color: var(--secondary-color);
+}
+.card1:hover{
+    background: var(--secondary-color);
+    color: #fff;
+}
+/* mkt section */
+.mkt-section{
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2rem;   
+    color: #fff;
+    z-index: 100;
+}
+img{
+    z-index: -1;
+    border-radius: 2rem;
+}
+.mkt-content{
+    position: absolute;
+    top: 0;
+    padding: 3rem 2rem;
+}
+.content-box{
+    padding: .1rem;
+    width: 45%;
+}
+.mkt-heading{
+    width: 14rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    background: rgba(190, 189, 189, 0.548);
+}
+.heading h2{
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    background: rgba(190, 189, 189, 0.548);
+}
+.mkt-subheading{
+    margin-top: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgba(190, 189, 189, 0.548);
+}
+.mkt-card-section{
+    margin: 4rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mkt-card{
+    padding: 2rem;
+    background: rgba(243, 60, 60, 0.801);
+    margin-right: 6rem;
+    border-radius: 1rem;
+}
+
+.divider{
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    background: #eee;
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+
+
+/* fl section */
+.fl-section{
+    width: 90%;
+    height: 90vh;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2rem;   
+    color: rgb(248, 248, 248);
+    z-index: 100;
+}
+img{
+    z-index: -1;
+    border-radius: 2rem;
+}
+.fl-content{
+    position: absolute;
+    top: 0;
+    padding: 3rem 2rem;
+}
+.content-box{
+    padding: .1rem;
+    width: 45%;
+}
+.fl-heading{
+    width: 14rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    background: rgba(3, 3, 3, 0.548);
+}
+.fl2-heading h2{
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    background: rgba(3, 3, 3, 0.548);
+}
+.fl-subheading{
+    margin-top: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgba(3, 3, 3, 0.548);
+}
+.fl-card-section{
+    margin: 4rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fl-card{
+    padding: 2rem;
+    background: rgba(3, 3, 3, 0.897);
+    margin-right: 6rem;
+    border-radius: 1rem;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    section{
+        width: 100%;
+        height: 40vh;
+        background:#fff;
+    }
+}
+@media only screen and (max-width : 768px){
+    .heading h1{
+        font-size: 4rem;
+        width: 100vw;
+        color:blue;
+    }
+}
+
+

@@ -1,0 +1,31 @@
+<div class="register-section">
+    <div class="content-box">
+        <h3>Register as {{asmkt}}</h3>
+        <hr>
+            <div class="form" [formGroup]="RegisterationForm">
+                        <div class="name input-item">
+                        <label>Username :</label>
+                        <input type="text" #username class="inp" placeholder=" User name" formControlName="userName">
+                    </div>
+                    <div class="email input-item">
+                        <label>Email :</label>    
+                        <input type="text" #email class="inp" placeholder=" Email Address" formControlName="email">
+                    </div>
+                    <div class="category input-item" #category *ngIf="ismkt">
+                        <label>Category :</label>    
+                        <input type="text" 
+                        class="inp inputCategory" 
+                        placeholder="Category" formControlName="category">
+                    </div>
+                    <div class="password input-item">
+                        <label>Password :</label>  
+                        <input type="password" #password class="inp" placeholder="Password" formControlName="password">
+                    </div>
+                </div>
+                <button (click)="getFormData()" 
+                 class="btn btn-danger register-btn">Create my account</button>
+            <div class="signup-sec">
+                <p>Already have an account?</p><span routerLink="/login">Log In</span>
+            </div>
+    </div>
+</div>

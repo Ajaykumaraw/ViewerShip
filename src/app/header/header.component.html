@@ -1,0 +1,38 @@
+<header>
+    <div class="section-one">
+          <div class="logo">
+            <h3><span>Viewer</span>$hip</h3>
+          </div>
+          <div class="menu-section">
+              <ul>
+                <li><a href="home" routerLink="home" class="active-nav">Home</a></li>
+                <li><a href="user" routerLink="user">Individual</a></li>
+                <li><a href="marketer" routerLink="marketer">Marketer</a></li>
+              </ul>
+          </div>
+    </div>      
+      <div class="user-profile">
+        <div class="login-bt">
+        <label class="profileUserName" for="">{{profileUserName}}</label>
+          <button *ngIf="!loggedin()" class="login-btn" routerLink="login">Login</button>
+          <button *ngIf="!loggedin()"  class="login-btn"routerLink="preregister" >signup</button>
+          <button *ngIf="loggedin()"  class="login-btn" (click)="logout()">Logout</button>
+        </div>
+        <!-- <div class="profile">
+          <img (click)="showLogout(logoutSection)" src=".//src/assets/profileimg.jpg" alt="">
+        </div> -->
+      </div>
+  </header>
+  <section class="body-section">
+      <div class="logout-section" #logoutSection>
+          <div class="profile-img">
+            <img src=".//src/assets/profileimg.jpg" alt="">
+          </div>
+          <hr>
+          <div class="username">
+            <h4>Stella</h4>
+          </div>
+          <hr>
+            <button class="logout-btn" routerLink="/login">Logout</button>
+      </div>
+</section>  

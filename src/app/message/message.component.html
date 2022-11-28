@@ -1,0 +1,27 @@
+<section>
+  <div class="container">
+    <!-- message box container -->
+    <div class="row">
+      <!-- chat window and profile holder -->
+      <div class="col-3">
+        <!-- profile holder -->
+      </div>
+      <div class="col-9">
+        <!-- chat area & message area -->
+        <div class="chat-area">
+          <!-- sender name -->
+          <div class="sender-prof"></div>
+          <div class="chat-sec">
+            <ul class="messagelist" *ngFor="let chname of userMessageList">
+              <li>{{chname}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="message-area" [formGroup]="messageArea">
+          <textarea class="message-box" name="" id="" formControlName="UserMassage"></textarea>
+          <button class="send-btn"  (click)="sendMessage()">send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
