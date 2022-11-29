@@ -10,10 +10,10 @@
  <!-- result list -->
     <div class="result-list" *ngIf="isvsible">
         <div class="list-loading" *ngFor="let chname of chResponse; let i = index" (click)="showChData(chname.snippet.channelId,
-        chname.snippet.channelTitle,chname.snippet.thumbnails.default.url)">
+        chname.snippet.channelTitle,chname.snippet.thumbnails.medium.url)">
             <div class="thumb">
                 <!-- chname.snippet.thumbnails.default.url -->
-                <img class="imgthumb" src="{{chname.snippet.thumbnails.default.url}}"  alt="">
+                <img class="imgthumb" src="{{chname.snippet.thumbnails.medium.url}}"  alt="">
             </div>
             <!-- chname.snippet.channelTitle -->
             <label for=""> {{chname.snippet.channelTitle | titlecase}}</label>
@@ -28,11 +28,11 @@
             </div>
             <div class="right-sec">
                 <div class="ch-title">
-                    <h3>{{chName}}</h3>
+                    <h3 #channel_name>{{chName}}</h3>
                 </div>
                 <hr class="line">
                 <div class="btn-sec">
-                    <button mat-raised-button color="primary">Save Channel</button>
+                    <button mat-raised-button color="primary" (click)="saveChannel(chName)" >Save Channel</button>
                 </div>
             </div>
         </div>

@@ -10,7 +10,8 @@ import { GetChannelService } from '../get-channel.service';
 import { json } from 'express';
 import { loginRequestData } from '../model/loginRequestDetails';
 import { sendChDataToServer } from '../model/sendChDataToServer';
-import {MatDialog} from '@angular/material/dialog';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import { DailogDataPass } from '../model/dialogDataPass';
 
 
 
@@ -42,8 +43,11 @@ export class FlHomeComponent implements OnInit {
   tokenSize!:number;
   sendChData:sendChDataToServer= new sendChDataToServer;
   item:boolean=true;
-
-
+  DialogRef!: MatDialogRef<DialogComponent>;
+  fullChData:any;
+  DialogData:DailogDataPass = new DailogDataPass;
+  stringDAta!:string;
+  arrayData!:string[];
 
   channelList:string[] = ["softwoodcoder","durgasoftsolution","testycodies","easytutorias",
                            "ux trends","soft woodcoder","softsolution"
@@ -778,7 +782,8 @@ export class FlHomeComponent implements OnInit {
 
   constructor(private service:ServiceService,private userLoginDetail:DataService
       ,private route: Router,private getChService:GetChannelService,
-      private LoginRequest:loginRequestData,private dialoge:MatDialog) {
+      private LoginRequest:loginRequestData,private dialoge:MatDialog,
+      ) {
       console.log("in constructor"+this.userLoginD);
       // this.userChName = "@"+"softwoodcoder";
   
@@ -808,12 +813,17 @@ export class FlHomeComponent implements OnInit {
       // console.log("in oninit getmethod"+this.service.getUserDetails());
   }
   openDialogNew(){
-      
-      const dialogRef = this.dialoge.open(DialogComponent)
-
-      dialogRef.afterClosed().subscribe(result => {
-        console.log(`Dialog result: ${result}`);
+    this.DialogRef = this.dialoge.open(DialogComponent)
+      this.DialogRef.afterClosed().subscribe(name => {
+          console.log(name);
+          this.stringDAta = name;
+          this.arrayData = this.stringDAta.split(",");
+          console.log(this.arrayData[1]);
+         this.userChName = this.arrayData[0];
+         this.fullChData = this.arrayData[1];
+      //  console.log("in fl side : "+name+" ");
       });
+    
   }
   
   showPopup(popup:HTMLElement){
@@ -886,12 +896,12 @@ export class FlHomeComponent implements OnInit {
   }
   //movied to dialog
   fetchChData(chDataObject:sendChDataToServer){
-    this.getChService.getSelectedChData(chDataObject,this.token).subscribe(data=>{
-        console.log(data);
-    this.chDetailsResponse = Object.keys(data).map((e:any)=>data[e]);
+    // this.getChService.getSelectedChData(chDataObject,this.token).subscribe(data=>{
+    //     console.log(data);
+    this.chDetailsResponse = Object.keys(this.fullChData).map((e:any)=>this.fullChData[e]);
     console.log(this.chDetailsResponse.length);
     this.chDetailsResponse = this.chDetailsResponse[5];
-    }),console.error();
+    // }),console.error();
   }
 
 

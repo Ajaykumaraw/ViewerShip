@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { GetChannelService } from '../get-channel.service';
+import { DailogDataPass } from '../model/dialogDataPass';
 import { sendChDataToServer } from '../model/sendChDataToServer';
 
 
@@ -9,7 +11,7 @@ import { sendChDataToServer } from '../model/sendChDataToServer';
   styleUrls: ['/dialog.component.css']
 })
 
-export class DialogComponent{
+export class DialogComponent implements OnInit{
 
   isvsible: boolean = false; 
   chResponse!:any[];
@@ -18,12 +20,26 @@ export class DialogComponent{
   chName:any;
   ischvsible: boolean = false;
   hideSearchBtn:boolean = true;
-  token:string="token";
+  token:any;
   chDetailsResponse!:any[];
   isChNameDisplay:boolean = false;
   thumUrl!:string;
+  fullChData:any; 
+  dialogDataPass: string[]=[];
+  // DailogDataPass = new DailogDataPass;
 
-  constructor(private getChService:GetChannelService) { }
+
+  constructor(private getChService:GetChannelService,
+    @Inject(MAT_DIALOG_DATA) public data: string,
+  private dialogRef: MatDialogRef<DialogComponent>,private dataD:DailogDataPass) { }
+
+  ngOnInit(): void {
+    this.userName =  localStorage.getItem("uName");
+    this.token = localStorage.getItem('utoken');
+  }
+
+
+
 
   response:any = {
     "kind": "youtube#searchListResponse",
@@ -741,30 +757,29 @@ export class DialogComponent{
 
 
   openResultDialog(val:string){
-      this.getChService.getChlist(val).subscribe(data => {
-    this.chResponse = Object.keys(data).map((e:any)=> data[e]);
-     console.log(this.chResponse.length);
-     if(this.chResponse.length == 6){
-      this.chResponse = this.chResponse[5];
-      console.log(this.chResponse);
-     }else if(this.chResponse.length == 5){
-      this.chResponse = this.chResponse[4];
-      console.log(this.chResponse);
-     }
+  //     this.getChService.getChlist(val).subscribe(data => {
+  //   this.chResponse = Object.keys(data).map((e:any)=> data[e]);
+  //    console.log(this.chResponse.length);
+  //    if(this.chResponse.length == 6){
+  //     this.chResponse = this.chResponse[5];
+  //     console.log(this.chResponse);
+  //    }else if(this.chResponse.length == 5){
+  //     this.chResponse = this.chResponse[4];
+  //     console.log(this.chResponse);
+  //    }
     
-   })
+  //  })
 
 
-  // this.chResponse = Object.keys(this.response).map((e:any)=>this.response[e]);
-  // console.log(this.chResponse.length);
-  // this.chResponse = this.chResponse[5];
+  this.chResponse = Object.keys(this.response).map((e:any)=>this.response[e]);
+  console.log(this.chResponse.length);
+  this.chResponse = this.chResponse[5];
   
   if(this.isvsible == false){
     this.isvsible = true;
   }else this.isvsible = false; 
   }
 
-  
 
   showChData(chId:String,chname:String,thumnailUrl:string){
     console.log(chId+""+chname+""+this.userName);
@@ -792,18 +807,28 @@ export class DialogComponent{
     //   this.hideSearchBtn = true;
     // }
 
-    this.fetchChData(this.sendChData);
+    // this.fetchChData(this.sendChData);
   }
 
   fetchChData(chDataObject:sendChDataToServer){
-    // this.getChService.getSelectedChData(chDataObject,this.token).subscribe(data=>{
-    //     console.log(data);
+    this.getChService.getSelectedChData(chDataObject,this.token).subscribe(data=>{
+        console.log(data);
+        return data;
     // this.chDetailsResponse = Object.keys(data).map((e:any)=>data[e]);
     // console.log(this.chDetailsResponse.length);
     // this.chDetailsResponse = this.chDetailsResponse[5];
-    // }),console.error();
+     }),console.error();
   }
 
+  saveChannel(channel_name:string){
+ //  this.fullChData =  this.fetchChData(this.sendChData);
+        console.log(this.chName);
+    this.fullChData = "this is full channel data ";
+      this.dialogDataPass.push(this.chName);
+      this.dialogDataPass.push(this.fullChData);
+      this.dialogRef.close(`${this.dialogDataPass}`);
+    console.log("in dialog side :"+this.dialogDataPass+""+this.dialogDataPass);
+  }
 
 
 

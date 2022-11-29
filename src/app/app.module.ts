@@ -24,6 +24,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MessageComponent } from './message/message.component';
 import { ProfileComponent } from './profile/profile.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { DailogDataPass } from './model/dialogDataPass';
 
 
 @NgModule({
@@ -60,7 +61,7 @@ import {MatDialogModule} from '@angular/material/dialog';
   entryComponents: [
     DialogComponent
   ],
-  providers: [loginRequestData],
+  providers: [loginRequestData,DailogDataPass],
   bootstrap: [AppComponent],
  
 })
