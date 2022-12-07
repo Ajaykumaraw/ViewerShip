@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MktDataServiceService } from 'src/services/mkt-data-service.service';
 import { User } from '../model/user';
 import { ServiceService } from '../service.service';
 
@@ -13,9 +14,10 @@ export class MKTHomeComponent implements OnInit {
   chThumb!:string;
   chID!:string;
   chTitle!:string;
+  mkt_token!:any;
 
 
-  constructor(private service:ServiceService) { }
+  constructor(private service:ServiceService,private mktDataService:MktDataServiceService) { }
 
     chDetailsResponse_:any = {
       "kind": "youtube#searchListResponse",
@@ -734,11 +736,15 @@ export class MKTHomeComponent implements OnInit {
 
   ngOnInit(): void {
     // console.log(this.service.getData());
+    this.mkt_token = localStorage.getItem('utoken');
+    console.log(this.mkt_token);
+    this.fetchMktHomeData()
 
-      this.chDetailsResponse_ = Object.keys(this.chDetailsResponse_).map((e:any)=>this.chDetailsResponse_[e]);
-     console.log(this.chDetailsResponse_.length);
-     this.chDetailsResponse_ = this.chDetailsResponse_[5];
-     console.log(this.chDetailsResponse_);
+    //   this.chDetailsResponse_ = Object.keys(this.chDetailsResponse_).map((e:any)=>this.chDetailsResponse_[e]);
+    //  console.log(this.chDetailsResponse_.length);
+    //  this.chDetailsResponse_ = this.chDetailsResponse_[5];
+    //  console.log(this.chDetailsResponse_);
+    
   }
 
   showChDetails(thumb:string,channelTitle:string,channelId:string){
@@ -747,6 +753,13 @@ export class MKTHomeComponent implements OnInit {
       this.chID = channelId;
   }
 
+  fetchMktHomeData(){
+      this.mktDataService.getMktData(this.mkt_token).subscribe(data=>{
+        console.log(data);
+        this.chDetailsResponse_ = Object.keys(data).map((e:any)=>data[e]);
+      })
+
+  }
 
 
 }

@@ -26,5 +26,8 @@ export class MessageComponent implements OnInit {
     this.userMessageList.push(this.messageArea.value.UserMassage);
   }
 
+  openChat(){
+    
+  }
 
 }

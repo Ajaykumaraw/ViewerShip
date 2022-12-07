@@ -1,27 +1,203 @@
 <section>
-  <div class="container">
-    <!-- message box container -->
-    <div class="row">
-      <!-- chat window and profile holder -->
-      <div class="col-3">
-        <!-- profile holder -->
+  <div class="row">
+      <div class="col-2 sidebar">
+        <app-sidebar></app-sidebar>
       </div>
-      <div class="col-9">
-        <!-- chat area & message area -->
-        <div class="chat-area">
-          <!-- sender name -->
-          <div class="sender-prof"></div>
-          <div class="chat-sec">
-            <ul class="messagelist" *ngFor="let chname of userMessageList">
-              <li>{{chname}}</li>
-            </ul>
+      <div class="col-10 chat-section">
+          <div class="chat-box">
+            <div class="row">
+              <div class="col-2 user-status-section">
+                  <ul style="margin: 0; padding: 0; border-radius: 1rem;">
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;" (click)="openChat()" 
+                    class="user-chat-list">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">JD</div>
+                              <div class="live-btn-status-active"></div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">John Doe</div>
+                              <div class="user-message">Can i send you the name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>9:00</span></div>
+                              <div class="message-count"><span>5</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">M</div>
+                              <div class="live-btn-status-offline"></div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">Maria</div>
+                              <div class="user-message">name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>9:17</span></div>
+                              <div class="message-count"><span>3</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">S</div>
+                              <div class="live-btn-status-active"></div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">Steve</div>
+                              <div class="user-message">you the name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>8:26</span></div>
+                              <div class="message-count"><span>1</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">S</div>
+                              <div class="live-btn-status-active"></div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">Steve</div>
+                              <div class="user-message">you the name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>8:26</span></div>
+                              <div class="message-count"><span>1</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">S</div>
+                              <div class="live-btn-status-offline"></div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">Steve</div>
+                              <div class="user-message">you the name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>8:26</span></div>
+                              <div class="message-count"><span>1</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">S</div>
+                              <div class="live-btn-status-offline"></div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">Steve</div>
+                              <div class="user-message">you the name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>8:26</span></div>
+                              <div class="message-count"><span>1</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">S</div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">Steve</div>
+                              <div class="user-message">you the name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>8:26</span></div>
+                              <div class="message-count"><span>1</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">S</div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">Steve</div>
+                              <div class="user-message">you the name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>8:26</span></div>
+                              <div class="message-count"><span>1</span></div>
+                            </div>
+                        </div>
+                    </li>
+                  </ul>
+              </div>
+              <div class="col-10 user-chat-section">
+                <!-- chat window header -->
+                  <div class="chat-window-header">
+                    <div class="chat-window-user-status">
+                      <div class="chat-window-profile-pic">
+                        <div class="user-innitials">S</div>
+                      </div>
+                      <div class="user-name-and-message">
+                        <div class="user-name">Steve</div>
+                        <div class="chat-window-user-message"><div class="live-btn"></div>Active</div>
+                      </div>
+                  </div>
+                  </div>
+                   <!-- chat window header -->
+
+                   <div class="main-chat-area">
+                      <ul class="chat-list">
+                        <li class="chat-list-items-left"><span>this is chat 1</span></li>
+                        <li class="chat-list-items-right"><span>this is chat 2</span></li>
+                        <li class="chat-list-items-left"><span>this is chat 3</span></li>
+                        <li class="chat-list-items-left"><span>this is chat 1</span></li>
+                        <li class="chat-list-items-right"><span>this is chat 2</span></li>
+                        <li class="chat-list-items-left"><span>this is chat 3</span></li>
+                        <li class="chat-list-items-left"><span>this is chat 1</span></li>
+                        <li class="chat-list-items-right"><span>this is chat 2</span></li>
+                        <li class="chat-list-items-left"><span>this is chat 3</span></li>
+                        <li class="chat-list-items-right"><span>this is chat 2</span></li>
+                        <li class="chat-list-items-left"><span>this is chat 3</span></li>
+                        <li class="chat-list-items-left"><span>this is chat 1</span></li>
+                        <li class="chat-list-items-right"><span>this is chat 2</span></li>
+                        <li class="chat-list-items-left"><span>this is chat 3</span></li>
+                        <li class="chat-list-items-left"><span>this is chat 1</span></li>
+                      </ul>
+                   </div>
+                   <div class="message-type-and-send">
+                      <input type="text" class="main-message" placeholder="Type a message...">
+                      <button class="send-message"><i class="fa-solid fa-paper-plane-top"></i>send</button>
+                  </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="message-area" [formGroup]="messageArea">
-          <textarea class="message-box" name="" id="" formControlName="UserMassage"></textarea>
-          <button class="send-btn"  (click)="sendMessage()">send</button>
-        </div>
       </div>
-    </div>
   </div>
 </section>

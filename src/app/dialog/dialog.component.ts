@@ -26,6 +26,7 @@ export class DialogComponent implements OnInit{
   thumUrl!:string;
   fullChData:any; 
   dialogDataPass: string[]=[];
+  chid!:string;
   // DailogDataPass = new DailogDataPass;
 
 
@@ -757,23 +758,23 @@ export class DialogComponent implements OnInit{
 
 
   openResultDialog(val:string){
-  //     this.getChService.getChlist(val).subscribe(data => {
-  //   this.chResponse = Object.keys(data).map((e:any)=> data[e]);
-  //    console.log(this.chResponse.length);
-  //    if(this.chResponse.length == 6){
-  //     this.chResponse = this.chResponse[5];
-  //     console.log(this.chResponse);
-  //    }else if(this.chResponse.length == 5){
-  //     this.chResponse = this.chResponse[4];
-  //     console.log(this.chResponse);
-  //    }
+      this.getChService.getChlist(val).subscribe(data => {
+    this.chResponse = Object.keys(data).map((e:any)=> data[e]);
+     console.log(this.chResponse.length);
+     if(this.chResponse.length == 6){
+      this.chResponse = this.chResponse[5];
+      console.log(this.chResponse);
+     }else if(this.chResponse.length == 5){
+      this.chResponse = this.chResponse[4];
+      console.log(this.chResponse);
+     }
     
-  //  })
+   })
 
 
-  this.chResponse = Object.keys(this.response).map((e:any)=>this.response[e]);
-  console.log(this.chResponse.length);
-  this.chResponse = this.chResponse[5];
+  // this.chResponse = Object.keys(this.response).map((e:any)=>this.response[e]);
+  // console.log(this.chResponse.length);
+  // this.chResponse = this.chResponse[5];
   
   if(this.isvsible == false){
     this.isvsible = true;
@@ -781,9 +782,11 @@ export class DialogComponent implements OnInit{
   }
 
 
-  showChData(chId:String,chname:String,thumnailUrl:string){
+  showChData(chId:string,chname:string,thumnailUrl:string){
+    console.log("===show ch data===");
     console.log(chId+""+chname+""+this.userName);
     this.sendChData.channelId  = chId;
+    this.chid = chId;
     this.sendChData.chName = chname;
     this.sendChData.userName = this.userName;
     this.thumUrl = thumnailUrl;
@@ -821,13 +824,14 @@ export class DialogComponent implements OnInit{
   }
 
   saveChannel(channel_name:string){
- //  this.fullChData =  this.fetchChData(this.sendChData);
-        console.log(this.chName);
-    this.fullChData = "this is full channel data ";
-      this.dialogDataPass.push(this.chName);
+   this.fullChData =  this.fetchChData(this.sendChData);
+        console.log(channel_name);
+  //  this.fullChData = "this is full channel data ";
+      this.dialogDataPass.push(channel_name);
       this.dialogDataPass.push(this.fullChData);
+      this.dialogDataPass.push(this.chid);
       this.dialogRef.close(`${this.dialogDataPass}`);
-    console.log("in dialog side :"+this.dialogDataPass+""+this.dialogDataPass);
+    console.log("in dialog side :"+this.chName+""+this.dialogDataPass);
   }
 
 

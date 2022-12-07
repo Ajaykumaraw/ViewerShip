@@ -1,83 +1,79 @@
-body{
-    background:#eee;
-}
-
-.card{
-    border:none;
-
-    position:relative;
-    overflow:hidden;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-.card:before{
-    
+.sidebar{
+    width: 18%;
+  }
+  .profile-section{
+    width: 81%;
+    height: 95vh;
+    background: #eee;
+    margin-left: .5rem;
+  }
+  .profile-content{
+    width: 95%;
+    height: 35rem;
+    background: #fff;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    overflow: scroll;
+  }
+  .profile-img-container{
+    width: 80%;
+    height: 12rem;
+    background: rgb(241, 236, 236);
+    border-radius: 1rem;
+    margin: .1rem auto;
+  }
+  .image-box{
+    width: 12rem;
+    height: 12rem;
+    background: rgb(248, 246, 246);
+    border-radius: 50%;
+    margin-left: 2rem;
+    border: 1px solid rgb(224, 228, 224);
+    align-items: center;
+  }
+  .image-box:after {
     content:"";
     position:absolute;
-    left:0;
-    top:0;
-    width:4px;
-    height:100%;
-    background-color:#E1BEE7;
-    transform:scaleY(1);
-    transition:all 0.5s;
-    transform-origin: bottom
+    width:100%;
+    bottom:1px;
+    z-index:-1;
+    transform:scale(.9);
+    box-shadow: 0px 0px 8px 2px #000000;
 }
-
-.card:after{
+  .image-inner-box{
+    width: 10rem;
+    height: 10rem;
+    background: rgb(248, 246, 246);
+    border-radius: 50%;
+    background:red;
+    margin: 1rem auto;
     
-    content:"";
-    position:absolute;
-    left:0;
-    top:0;
-    width:4px;
-    height:100%;
-    background-color:#8E24AA;
-    transform:scaleY(0);
-    transition:all 0.5s;
-    transform-origin: bottom
-}
-
-.card:hover::after{
-    transform:scaleY(1);
-}
-
-
-.fonts{
-    font-size:11px;
-}
-
-.social-list{
-    display:flex;
-    list-style:none;
-    justify-content:center;
-    padding:0;
-}
-
-.social-list li{
-    padding:10px;
-    color:#8E24AA;
-    font-size:19px;
-}
-
-
-.buttons button:nth-child(1){
-       border:1px solid #8E24AA !important;
-       color:#8E24AA;
-       height:40px;
-}
-
-.buttons button:nth-child(1):hover{
-       border:1px solid #8E24AA !important;
-       color:#fff;
-       height:40px;
-       background-color:#8E24AA;
-}
-
-.buttons button:nth-child(2){
-       border:1px solid #8E24AA !important;
-       background-color:#8E24AA;
-       color:#fff;
-        height:40px;
-}
+  }
+  .profile-btn{
+    margin-top: 2rem;
+  }
+  .change-pic-btn .ch-btn{
+    width: 10rem;
+    height: 2.7rem;
+    background:  rgb(221, 20, 20);
+    border-radius: .4rem;
+    padding: .5rem 1rem;
+    border: none;
+    color: #fff;
+  }
+  .delete-btn .del-btn{
+    width: 10rem;
+    height: 2.7rem;
+    border: 1px solid rgb(243, 75, 75);
+    border-radius: .4rem;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+  }
+  .profile-details-section{
+    width: 80%;
+    height: 20rem;
+    background: rgb(241, 236, 236);
+    border-radius: 1rem;
+    margin: .5rem auto;
+  }

@@ -19,20 +19,20 @@
                     <thead class="table-header">
                       <tr> 
                         <th scope="col"></th>
+                        <th scope="col">User Name</th>
                         <th scope="col">Channel Name</th>
-                        <th scope="col">Subscriber Count</th>
-                        <th scope="col">Video count</th>
+                        <th scope="col">Channel Id</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="table-row" *ngFor="let chdetails of chDetailsResponse_; let i = index" (click)="showChDetails(chdetails.snippet.thumbnails.default.url,
-                      chdetails.snippet.channelTitle,chdetails.snippet.channelId)">
+                      <tr class="table-row" *ngFor="let chdetails of chDetailsResponse_; let i = index" (click)="showChDetails(chdetails.chName,
+                      chdetails.userName,chdetails.userName)">
                         <td><div class="thumbnail">
-                            <img src="{{chdetails.snippet.thumbnails.default.url}}" alt="">
+                            <img src="{{chdetails.userName }}" alt="">
                         </div></td>
-                        <td> {{chdetails.snippet.channelTitle | titlecase}}</td>
-                        <td> {{chdetails.snippet.channelId | titlecase}}</td>
-                        <td>{{chdetails.snippet.title | titlecase}}</td>
+                        <td> {{chdetails.userName | titlecase}}</td>
+                        <td> {{chdetails.chName | titlecase}}</td>
+                        <td>{{chdetails.channelId | titlecase}}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -43,7 +43,7 @@
                         <div class="profile-thumbnail">
                             <img src="{{chThumb}}" alt="">
                         </div>       
-                        <h3 class="channel-name">{{chTitle}}</h3>   
+                        <h3 class="channel-name">{{chThumb}}</h3>   
                     </div>
                   <div class="lower-inner-box">
                         <div class="subscriber-box">

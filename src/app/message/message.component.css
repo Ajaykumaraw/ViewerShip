@@ -1,69 +1,247 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
-
-*{
-overflow: hidden;
-}
-.container{
-  width: 100%;
-  height: 85vh;
-  border: 1px solid rgb(103, 102, 102);
-  margin: 1rem auto;
-  box-shadow: 1px 2px 2px 1px #dddd;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap');
 .row{
-  height: 95%;
-  border: 1px solid rgb(103, 102, 102);
-  margin: 1rem auto;
-  box-shadow: 1px 2px 2px 1px #dddd;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
 }
-.col-3{
-  width: 20%;
-  height: 95%;
-  margin: 1rem 0;
-  border: 1px solid rgb(103, 102, 102);
-  box-shadow: 1px 2px 2px 1px #dddd;
+.sidebar{
+  width: 18%;
 }
-.col-9{
-  width: 80%;
-  height: 95%;
-  margin: 1rem 0;
-  border: 1px solid rgb(103, 102, 102);
-  box-shadow: 1px 2px 2px 1px #dddd;
+.chat-section{
+  width: 81%;
+  height: 90vh;
   background: #eee;
+  margin-left: .5rem;
 }
-.chat-area{
-  width: 100%;
-  height: 75%;
-  border: 1px solid rgb(103, 102, 102);
-  box-shadow: 1px 2px 2px 1px #dddd;
-  background: #eee;
+.user-status-section{
+  width: 17rem;
+  height: 30rem;
+  margin: 1rem .5rem;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
 }
-.message-area{
-  width: 100%;
-  height: 25%;
-  border: 1px solid rgb(103, 102, 102);
-  box-shadow: 1px 2px 2px 1px #dddd;
-  background: rgb(144, 112, 112);
-}
-input{
-  width: 100%;
-  height: 8rem;
-  margin: .4rem;
-}
-.sender-prof{
-  width: 100%;
-  height: 15%;
-  border: 1px solid rgb(103, 102, 102);
-  box-shadow: 1px 2px 2px 1px #dddd;
-  background: rgb(144, 112, 112);
-}
-.send-btn{
-  width: 10%;
-  height: 3rem;
-  border: none;
-  font-size: 1rem;
-}
-.messagelist{
+/* <!-- one user chat status section --> */
 
+.single-user-status{
+  width: 100%;
+  height: 3rem;
+  margin-top: 1rem;
+  display: flex;
+  background: rgb(248, 247, 247);
+  border-radius: .2rem;
+}
+.profile-pic{
+  width: 3rem;
+  height: 3rem;
+  background: rgb(230, 180, 180);
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+}
+.live-btn-status-active{
+  width: .6rem;
+  height: .6rem;
+  margin: 0rem .3rem;
+  margin-top: -.3rem;
+  border-radius: 50%;
+  background: green;
+  float: right;
+}
+
+.live-btn-status-offline{
+  width: .6rem;
+  height: .6rem;
+  margin: 0rem .3rem;
+  margin-top: -.3rem;
+  border-radius: 50%;
+  background: rgb(182, 192, 182);
+  float: right;
+}
+
+.user-innitials{
+  margin-top: .6rem;
+  margin-left: .2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.user-name-and-message{
+  width: 8rem;
+  height: 3rem;
+  margin-left: .5rem;
+}
+.user-name{
+  margin-top: .2rem;
+  font-weight: bold;
+
+}
+.user-message{
+  width: 8rem;
+  height: 1.3rem;
+  margin-top: -.1rem;
+  font-size: .8rem;
+  overflow: hidden;
+}
+.time-and-message-count{
+  height: 3rem;
+  width: 2.5rem;
+  text-align: center;
+  align-items: center;
+}
+.time{
+  padding: .2rem;
+  font-size: .8rem;
+  font-weight: bold;
+}
+.message-count{
+  text-align: center;
+  width: 1.4em;
+  height: 1.1rem;
+  font-size: .8rem;
+  font-weight: bold;
+  background: rgb(252, 151, 68);
+  border-radius: 50%;
+  margin-left: .6rem;
+  text-align: center;
+}
+/* chat window */
+.user-chat-section{
+  width: 44rem;
+  height: 30rem;
+  margin: 1rem .2rem;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.chat-window-header{
+  width: 100%;
+  height: 3.7rem;
+  border-radius: 1rem;
+  background: rgb(245, 245, 242);
+  margin: .5rem .1rem;
+}
+
+.chat-window-user-status{
+  width: 100%;
+  height: 3rem;
+  margin: .5rem .2rem;
+  display: flex;
+  border-radius: .2rem;
+}
+.chat-window-profile-pic{
+  width: 3rem;
+  height: 3rem;
+  background: rgb(230, 180, 180);
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  margin-top: .4rem;
+  margin-left: .5rem;
+}
+.chat-window-user-status .user-name-and-message{
+  width: 8rem;
+  height: 3rem;
+  margin-left: .5rem;
+  margin-top: .3rem;
+}
+.chat-window-user-message{
+  width: 8rem;
+  height: 1.3rem;
+  margin-top: -.1rem;
+  font-size: .8rem;
+  display: flex;
+}
+.live-btn{
+  width: .6rem;
+  height: .6rem;
+  margin: .2rem .3rem;
+  border-radius: 50%;
+  background: green;
+}
+
+/* main chat area */
+
+.main-chat-area{
+  width: 100%;
+  height: 19rem;
+  border-radius: 1rem;
+  background: rgb(245, 245, 242);
+  margin: .2rem .1rem;
+}
+.message-type-and-send{
+  width: 100%;
+  height: 5rem;
+  border-radius: 1rem;
+  background: rgb(245, 245, 242);
+  margin: .3rem .1rem;
+  display: flex;
+}
+.main-message{
+  width: 82%;
+  height: 4rem;
+  margin: .6rem .4rem;
+  border: none;
+  padding-left: 1rem;
+  border-radius: 1.5rem;
+  outline: none;
+}
+.send-message{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin-top: .5rem;
+  margin-left: .3rem;
+  background: rgb(9, 160, 122);
+  border: none;
+  font-weight: bold;
+}
+.fa-paper-plane-top{
+ font-size: 2rem;
+ color: rgb(46, 223, 99);
+}
+/* chat-list-sectin */
+.chat-list{
+  height: 19rem;
+  overflow: scroll;
+  padding: 0;
+}
+.chat-list-items-left{
+  list-style: none;
+  font-size: .8rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  align-items: flex-start;
+  margin-top: .5rem;
+  margin-left: 1rem;
+}
+
+.chat-list-items-right{
+  list-style: none;
+  font-size: .8rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  margin-left: 70%;
+  margin-top: .5rem;
+
+}
+.chat-list-items-left span{
+  background: rgb(116, 207, 230); 
+  padding: .2rem 1rem;
+  border-radius: 15px 30px 20px; 
+}
+
+.chat-list-items-right span{
+  background: rgb(116, 207, 230); 
+  padding: .2rem 1rem;
+  border-radius: 15px 30px 20px; 
+}
+.single-user-status:hover{
+  width: 100%;
+  height: 3rem;
+  margin-top: 1rem;
+  display: flex;
+  background: rgb(238, 234, 234);
+  border-radius: .5rem;
 }

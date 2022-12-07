@@ -21,6 +21,10 @@ export class GetChannelService {
 
   getSelectedCh_Data_Url:string = "http://localhost:8080/user/postUserChDetails";
 
+  fetchDataOnLoginUrl:string = "http://localhost:8080/user/getChnameAndData?userName="
+
+
+
   constructor(private http:HttpClient,private loginRequestDetails:loginRequestData) { }
 
   getChlist(userInput:string):Observable<any[]>{
@@ -33,5 +37,12 @@ export class GetChannelService {
     const header = new HttpHeaders().set("Authenticate",'Bearer '+ token_);
 
     return this.http.post(this.getSelectedCh_Data_Url,chDataObject,{'headers':header});
+}
+
+  getChDataOnLogin(userName:string,userToken_N:string):Observable<any>{
+    console.log(userName+" "+userToken_N);
+    const header_this = new HttpHeaders().set("Authenticate",'Bearer '+ userToken_N);
+    console.log(header_this);
+    return this.http.post(this.fetchDataOnLoginUrl+userName,null,{'headers':header_this});
 }
 }

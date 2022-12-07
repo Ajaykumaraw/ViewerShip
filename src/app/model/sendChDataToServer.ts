@@ -1,5 +1,5 @@
 export class sendChDataToServer{
-    userName:String="";
-    channelId:String="";
-    chName:String="";
+    userName:string="";
+    channelId:string="";
+    chName:string="";
 }
