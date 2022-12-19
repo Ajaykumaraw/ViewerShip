@@ -1,4 +1,4 @@
-<section>
+<section class="container">
     <div class="row">
         <div class="col-md-6">
             <div class="content">
@@ -10,14 +10,14 @@
                         the best people Right now, Right here</h5>
                     </div>
                     <div class="home-btn">
-                        <button class="ch-btn" routerLink="/login">Find channel</button>
-                        <button class="li-btn" routerLink="/login">List channel</button>
+                        <button class="ch-btn h-btn" routerLink="/login">Find channel</button>
+                        <button class="li-btn h-btn" routerLink="/login">List channel</button>
                     </div>
             </div>
         </div>
-        <div class="col-md-6 mx-auto">
+        <div class="col img-home-section">
             <div class="imag-container">
-                <img src=".//src/assets/homepageimg.png" alt="" class="img-fluid">
+                <img src=".//src/assets/myCover3.webp" alt="" class="img-fluid">
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
             <h3>Browse chennels by category</h3>
             <p>Looking for channel listing <span routerLink="/login">login for listing</span></p>
         </div>
-        <div class="cards">
+        <div class="incards">
             <div class="card1">
                 <h4>Music</h4>
             </div>
@@ -44,16 +44,16 @@
     </div>
     <!-- for mkt section -->
     <div class="mkt-section">
-        <img src=".//src/assets/secondcover.jpg" alt="">
+        <img class="mkt-img" src=".//src/assets/secondcover.jpg" alt="">
         <div class="mkt-content">
-            <div class="content-box">
+            <div class="mkt-content-box">
                 <h5 class="mkt-heading">For Marketing officials</h5>
-                <div class="heading">
+                <div class="mk-heading">
                     <h2>Find channels within <br> few click</h2>
                 </div>
                 <div class="mkt-subheading">
-                    <p>Work with the largest network of independent <br>
-                        professionals and get things done</p>
+                    <p>Work with the largest network of independent
+                        professionals and get things done.</p>
                 </div>
             </div>      
             <div class="mkt-card-section">
@@ -75,19 +75,17 @@
         </div>
     </div>
 
-
-
     <!-- for chnnel holders section -->
     <div class="fl-section">
-        <img src=".//src/assets/cover3.jpg" alt="">
+        <img class="fl-img" src=".//src/assets/cover3.jpg" alt="">
         <div class="fl-content">
-            <div class="content-box">
+            <div class="fl-content-box">
                 <h5 class="fl-heading">For channel holders</h5>
                 <div class="fl2-heading">
-                    <h2>List your channel & <br> start promoting</h2>
+                    <h2>List your channel & start promoting</h2>
                 </div>
                 <div class="fl-subheading">
-                    <p>Work with the small to high level businesses <br>
+                    <p>Work with the small to high level businesses
                         and promote on your channel</p>
                 </div>
             </div>      
@@ -104,5 +102,7 @@
             </div>
         </div>    
     </div>
-    <app-footer></app-footer>
+    <div class="home-footer">
+        <app-footer></app-footer>
+    </div>
 </section>

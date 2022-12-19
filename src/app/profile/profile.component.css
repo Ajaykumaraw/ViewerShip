@@ -77,3 +77,63 @@
     border-radius: 1rem;
     margin: .5rem auto;
   }
+  .profile-details-content{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding-top: 1rem;
+  }
+  .user-name{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rem auto;
+    font-family:'Nunito', sans-serif;
+    font-weight: bold;
+  }
+  
+  .firstname, .lastname{
+    border: none;
+    width: 15rem;
+    height: 3rem;
+    border-radius: .5rem;
+    padding-left: 1rem;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px #bbbbbb;
+  }
+  .mobile-no{
+    width: 70%;
+    margin: 1rem auto;
+    font-family:'Nunito', sans-serif;
+    font-weight: bold;
+    text-align: left;
+  }
+.content-mb{
+  width: 40%;
+}
+
+  .mb-number{
+    border: none;
+    width: 15rem;
+    height: 3rem;
+    border-radius: .5rem;
+    padding-left: 1rem;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px #bbbbbb;
+  }
+  .save-btn-sec{
+    float: right;
+    margin-right: 1rem;
+  }
+  .save-btn{
+    width: 10rem;
+    height: 2.7rem;
+    background: rgb(230, 26, 26);
+    border-radius: .4rem;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+  }

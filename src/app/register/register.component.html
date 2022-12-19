@@ -3,27 +3,45 @@
         <h3>Register as {{asmkt}}</h3>
         <hr>
             <div class="form" [formGroup]="RegisterationForm">
-                        <div class="name input-item">
-                        <label>Username :</label>
-                        <input type="text" #username class="inp" placeholder=" User name" formControlName="userName">
+                    <div class="name input-item">
+                        <div class="inner-box">
+                            <label>Username</label>
+                        </div>
+                        <div class="inputt">
+                            <input type="text" #username class="inp" formControlName="userName">
+                        </div>
                     </div>
                     <div class="email input-item">
-                        <label>Email :</label>    
-                        <input type="text" #email class="inp" placeholder=" Email Address" formControlName="email">
+                        <div class="inner-box">
+                            <label>Email</label>    
+                        </div>
+                        <div class="inputt">
+                            <input type="text" #email class="inp" formControlName="email">
+                        </div>
                     </div>
                     <div class="category input-item" #category *ngIf="ismkt">
-                        <label>Category :</label>    
-                        <input type="text" 
-                        class="inp inputCategory" 
-                        placeholder="Category" formControlName="category">
+                        <div class="inner-box">
+                            <label>Category</label>    
+                        </div>
+                        <div class="inputt">
+                            <input type="text" 
+                               class="inp inputCategory" 
+                                formControlName="category">
+                        </div>
                     </div>
                     <div class="password input-item">
-                        <label>Password :</label>  
-                        <input type="password" #password class="inp" placeholder="Password" formControlName="password">
+                        <div class="inner-box">
+                            <label>Password</label>  
+                        </div>
+                        <div class="inputt">
+                            <input type="password" #password class="inp" formControlName="password">
+                        </div>
+                    </div>
+                    <div class="input-item">
+                        <button (click)="getFormData()" 
+                        class="btn btn-danger register-btn">Create account</button>
                     </div>
                 </div>
-                <button (click)="getFormData()" 
-                 class="btn btn-danger register-btn">Create my account</button>
             <div class="signup-sec">
                 <p>Already have an account?</p><span routerLink="/login">Log In</span>
             </div>

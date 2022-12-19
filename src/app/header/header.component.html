@@ -1,6 +1,9 @@
 <header>
     <div class="section-one">
           <div class="logo">
+            <div class="menu-btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
             <h3><span>Viewer</span>$hip</h3>
           </div>
           <div class="menu-section">
@@ -15,14 +18,14 @@
         <div class="login-bt">
         <label class="profileUserName" for="">{{profileUserName}}</label>
           <button *ngIf="!loggedin()" class="login-btn" routerLink="login">Login</button>
-          <button *ngIf="!loggedin()"  class="login-btn"routerLink="preregister" >signup</button>
-          <button *ngIf="loggedin()"  class="login-btn" (click)="logout()">Logout</button>
+          <button *ngIf="!loggedin()"  class="register-btn"routerLink="preregister" >signup</button>
+          <button *ngIf="loggedin()"  class="logout-btn" (click)="logout()">Logout</button>
         </div>
         <!-- <div class="profile">
           <img (click)="showLogout(logoutSection)" src=".//src/assets/profileimg.jpg" alt="">
         </div> -->
       </div>
-  </header>
+</header>
   <section class="body-section">
       <div class="logout-section" #logoutSection>
           <div class="profile-img">

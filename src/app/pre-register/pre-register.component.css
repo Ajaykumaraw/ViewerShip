@@ -97,3 +97,66 @@ span{
     cursor: pointer;
     color: rgb(5, 93, 145);
 }
+@media (min-width:268px)   and (max-width: 468px) { 
+    .pre-reg-sect{
+        width: 100%;
+        margin: 0rem;
+        padding-top: 1rem;
+        overflow-x: hidden;
+    }
+    .content{
+        width: 100%;
+        margin: .1rem auto;
+        border: none;
+        padding-left: 0rem;
+    }
+    .selaction-box{
+        display: block;
+        padding: 0rem;
+        margin: 0rem;
+    }
+    .mkt-section{
+        width: 80%;
+        margin: .2rem auto;
+    }
+    .mkt-section h5{
+        font-weight: bold;
+    }
+    
+    .setcolor{
+        width: 80%;
+        text-align: left;
+        background: rgb(238, 55, 55);
+        color: #fff;
+        padding: 2rem;
+        font-size: 1rem;
+        margin:  1rem 2rem;
+        border-radius: 1rem;
+    }
+    
+    .diableDive{
+        width: 80%;
+        text-align: left;
+        background: rgb(238, 55, 55);
+        color: #fff;
+        padding: 2rem;
+        font-size: 1rem;
+        margin:  1rem 2rem;
+        border-radius: 1rem;
+        opacity: 0.4;
+    }
+    .fl-section{
+        width: 80%;
+        margin: .5rem auto;
+    }
+    .fl-section h5{
+        font-weight: bold;
+    }
+    .diablebtn{
+        width: 85%;
+        height: 2.8rem;
+        margin-top: .5rem;
+        font-size: 1rem;
+        border-radius: .2rem;
+    }
+}    

@@ -4,25 +4,30 @@
     </div>
 
     <div class="content-section">
-        <h3>Login in to Viewership</h3>
+        <h3 class="login-title">Login</h3>
             <div class="form" [formGroup]="LoginForm">
                 <div class="user-name">
-                    <label for="">User name :</label>
-                    <input type="text" #email class="inp" placeholder="User Name or Email"  formControlName="userName">
+                    <label for="">User name</label>
+                    <input type="text" #email class="inp"  formControlName="userName">
                 </div>
                 <div class="user-password">
-                    <label for="">Password :</label>
-                    <input type="password" #password class="inp" placeholder=" Password" formControlName="password">
+                    <label for="">Password</label>
+                    <input type="password" #password class="inp" formControlName="password">
                 </div>
-            </div>
-            <button class="btn btn-danger loginbtn" (click)="loginMethod()">Login</button>
-
-            <div class="new-register-section">
-                <div class="new-reg-content">
-                    <hr><label>Don't have Viewership account?</label><hr>
+                <div class="login-btn-div">
+                    <button class="btn btn-danger loginbtn" (click)="loginMethod()">Login</button>
                 </div>
-                <div class="signup-button">
-                    <button class="sign-up-button" routerLink="/preregister">Sign Up</button>
+                <div class="new-register-section">
+                    <div class="new-reg-content">
+                         <hr class="line1">
+                            <div class="lable-content">
+                                <p class="getAccount">Don't have Viewership account?</p>
+                            </div>
+                       <hr class="line1">
+                    </div>
+                    <div class="signup-button">
+                        <button class="sign-up-button" routerLink="/preregister">Sign Up</button>
+                    </div>
                 </div>
             </div>
     </div>

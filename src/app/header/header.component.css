@@ -131,3 +131,64 @@ span{
     border: none;
     border-radius: 1rem;
 } 
+
+.register-btn{
+    padding: .5rem 1rem;
+    border: none;
+    background: var(--secondary-color);
+    color: #fff;
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
+
+
+
+@media (min-width:268px)   and (max-width: 468px) { 
+    header{
+        width: 100%;
+        height: 4rem;
+        padding-left: 3%;
+        padding-right: 3%;
+        background: var(--secondary-color);
+    }
+    .section-one{
+        width: 30%;
+    }
+    .logo{
+        display: flex;
+        color: #fff;
+    }
+    
+    .menu-btn .fa-bars{
+        width: 10%;
+        color: #fff;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        margin-left: .3rem;
+        margin-top: .3rem;
+    }
+    span{
+        color: #fff;
+    }
+    .logo h3{
+        padding-top: .2rem;
+        font-size: 1.7rem;
+        color: #fff;
+    }
+    .menu-section{
+        display: none;
+    }
+    .user-profile{
+        width: 40%;
+        text-align: right;
+    }
+    .login-btn{
+        display: none;
+    }
+    .register-btn{
+        width: 5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        
+    }
+}

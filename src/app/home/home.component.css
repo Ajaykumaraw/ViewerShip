@@ -1,20 +1,17 @@
-html{
-    font-size:62.5%;
-}
-section{
+.container{
     width: 100%;
-    height: 90vh;
+    max-width: 100%;
+    height: 100%;
     background:#fff;
-}
-.col-6{
-    margin-top: 3rem;
+    margin: .1rem auto;
+    overflow-x: hidden;
 }
 .content{
     margin: 2rem 4rem;
     
 }
 .heading h1{
-    font-size: 5.2rem;
+    font-size: 6.5rem;
     font-weight: 700;
     color: var(--secondary-color);
 }
@@ -52,7 +49,12 @@ section{
     border: 1px solid var(--secondary-color);
     background: rgb(235, 233, 233);
 }
+.img-home-section{
+    
+}
 .imag-container{
+    width: 100%;
+    max-width: 90%;
     margin: 1rem;
 }
 img{
@@ -225,19 +227,207 @@ img{
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-    section{
+
+@media (min-width:268px) and (max-width:468px) { 
+    .html{
+        scroll-behavior: smooth;
+    }
+    .container{
         width: 100%;
-        height: 40vh;
+        max-width: 100%;
+        height: 100%;
         background:#fff;
+        margin: .1rem auto;
+        overflow-x: hidden;
     }
-}
-@media only screen and (max-width : 768px){
+    .content{
+        margin: 2rem 1rem;
+
+    }
     .heading h1{
-        font-size: 4rem;
-        width: 100vw;
-        color:blue;
+        font-size: 5rem;
+    }
+    .subheading h5{
+        font-size: 1rem;
+    }
+    .home-btn{
+        padding: 0rem;
+        display: flex;
+    }
+    .h-btn{
+        width: 11rem;
+        height: 3rem;
+        font-size: .8rem;
+        padding: 0;
+    }
+    .img-home-section{
+        width: 100%;
+    }
+    .imag-container{
+        width: 100%;
+    }
+
+    /* card section */
+    .card-section{
+        height: 100%;
+        padding: 1rem 1rem;
+    }
+    .card-heading h3{
+        font-size: 2rem;
+    }
+    .incards{
+        font-family: 'Poppins',sans-serif;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: block;
+        justify-content: center;
+    }
+    .card1{
+        width: 15rem;
+        height: 5rem;
+        margin: .8rem auto;
+    }
+
+    /* mkt section */
+
+    .mkt-section{
+        width: 100%;
+        height: 100%;
+        padding: 0rem;
+    }
+    .mkt-img{
+        width: 100%;
+        margin: 0rem;
+    }
+    .mkt-content{
+        width: 100%;
+        padding: 0rem;
+    }
+    .mkt-content-box{
+        width: 100%;
+        height: 100%;
+        padding-left: 1rem;
+    }
+    .mkt-heading{
+        width: 9rem;
+        height: 1rem;
+        font-size: .8rem;
+        margin-left: .1rem;
+        margin-top: .6rem;
+        padding: 0rem;
+        transition: all 3s ease;
+        background: rgba(49, 49, 49, 0.548);
+    }
+    .mk-heading{
+        width: 40%;
+        height: 2rem;
+        margin-top: .1rem;
+        border-radius: .2rem;
+        padding: .2rem;
+        background: rgba(49, 49, 49, 0.548);
+    }
+    .mk-heading h2{
+        font-size: .8rem;
+        font-weight: 100;
+    }
+    .mkt-subheading{
+        padding: .3rem;
+        width: 76%;
+        height: 4.8rem;
+        margin-top: 1rem;
+        border-radius: .2rem;
+        background: rgba(49, 49, 49, 0.548);
+    }
+    .mkt-subheading p{
+        font-size: .9rem;
+    }
+    .mkt-card-section{
+        display: none;
+    }
+
+    /* divider */
+    .divider{
+        font-family: 'Poppins',sans-serif;
+        width: 100%;
+        height: 100%;
+        padding: .5rem auto;
+        text-align: center;
+        display: block;
+        margin: 0rem;
+        justify-content: center;
+        background: #fff;
+    }
+    .divider-content{
+        width: 15rem;
+        height: 5rem;
+        border-radius: .4rem;
+        margin: .8rem auto;
+        padding: .3rem;
+        background: #eee;
+    }
+    .divider-content h1{
+        margin-top: .5rem;
+        font-size: 1.4rem;
+    }
+
+    /* for fl-section */
+
+    .fl-section{
+        width: 100%;
+        height: 100%;
+        padding: 0rem;
+    }
+    .fl-img{
+        width: 100%;
+        margin: 0rem;
+    }
+    .fl-content{
+        width: 100%;
+        padding: 0rem;
+    }
+    .fl-content-box{
+        width: 100%;
+        height: 100%;
+        padding-left: 1rem;
+    }
+    .fl-heading{
+        width: 9rem;
+        height: 1rem;
+        font-size: .8rem;
+        margin-left: .1rem;
+        margin-top: .6rem;
+        padding: 0rem;
+        transition: all 3s ease;
+        background: rgba(49, 49, 49, 0.548);        
+    }
+    .fl2-heading h2{
+        width: 40%;
+        height: 2.2rem;
+        margin-top: 1.6rem;
+        border-radius: .2rem;
+        padding: .3rem;
+        font-size: .8rem;
+        font-weight: 100; 
+        background: rgba(49, 49, 49, 0.548);     
+    }
+    .fl-subheading{
+        width: 80%;
+        height: 100%;
+        border-radius: .2rem;
+        padding: .1rem;
+        font-size: 1rem;
+        margin-top: 1.8rem;
+        font-weight: 100; 
+        background: rgba(49, 49, 49, 0.548);     
+    }
+
+    /* footer */
+    .home-footer{
+        width: 100%;
+        height: 100%;
+        margin: 0rem;
+        background: yellow;
+        padding: 0rem;
     }
 }
-
-

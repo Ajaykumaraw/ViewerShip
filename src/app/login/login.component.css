@@ -93,3 +93,86 @@ p{
     color: rgb(41, 50, 63);
     border-radius: .5rem;
 }
+
+
+@media (min-width:268px)   and (max-width: 468px) { 
+    .register-section{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        margin: 0rem;
+        padding: 0rem;
+        font-family: 'Poppins',sans-serif;
+    }
+    .login-title{
+        margin-top: 1rem;
+        font-family: 'Poppins',sans-serif;
+    }
+    .content-section{
+        width: 100%;
+        height: 100%;
+        margin: 2rem auto;
+        padding: 0rem;
+        border: none;
+    }
+    .form{
+        display: block;
+    }
+    .user-name,.user-password{
+        display: block;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+    .inp{
+        width: 100%;
+        margin: 0rem;
+        border-radius: .2rem;
+    }
+    .login-btn-div{
+        width: 100%;
+        margin: 1rem auto;
+    }
+    .loginbtn{
+        width: 100%;
+        height: 2.8rem;
+        margin-top: .5rem;
+        font-size: 1.2rem;
+        border-radius: .2rem;
+    }
+    .new-register-section{
+        width: 100%;
+        margin-top: 4rem;
+        margin-left: 0rem;
+    }
+    .new-reg-content{
+        width: 100%;
+        margin: 0rem;
+        display: flex;
+    }
+    .line1{
+        width: 10%;
+        margin: 0rem;
+        padding: 0rem;
+    }
+    .lable-content{
+        width: 80%;
+        margin: 0rem;
+        padding: 0rem;
+    }
+    .getAccount{
+        width: 100%;
+        margin: 0rem;
+        background: #fff;
+    }
+    .signup-button{
+        width: 100%;
+        margin-top: 1rem ;
+    }
+    .sign-up-button{
+        width: 100%;
+        height: 100%;
+        padding: .5rem .3rem;
+        border-radius: .2rem;
+    }
+
+}

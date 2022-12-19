@@ -68,3 +68,45 @@ span{
     cursor: pointer;
     color: rgb(5, 93, 145);
 }
+@media (min-width:268px)   and (max-width: 468px) { 
+  .register-section{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0rem;
+    padding: 0rem;
+    font-family: 'Poppins',sans-serif;
+  }
+  .content-box{
+    margin-top: .8rem;
+    width: 100%;
+    border: none;
+    font-family: 'Poppins',sans-serif;
+  }
+  .form{
+    padding: 0rem;
+    display: block;
+  }
+  
+  .input-item{
+    display: block;
+    text-align: left;
+  }
+  .inputt{
+  }
+  .inner-box{
+    margin-left: .6rem;
+  }
+  .inputt .inp{
+    width: 95%;
+    margin: .5rem;
+    border-radius: .2rem;
+  }
+  .register-btn{
+    width: 95%;
+    height: 100%;
+    margin: 1rem .5rem;
+    padding: .5rem .1rem;
+    border-radius: .2rem;
+  }
+}

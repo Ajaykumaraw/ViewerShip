@@ -233,6 +233,7 @@
 }
 
 .chat-list-items-right span{
+  text-align: center;
   background: rgb(116, 207, 230); 
   padding: .2rem 1rem;
   border-radius: 15px 30px 20px; 
