@@ -1,11 +1,11 @@
-<section>
+<section class="user-chat-sec">
   <div class="row">
       <div class="col-2 sidebar">
         <app-sidebar></app-sidebar>
       </div>
       <div class="col-10 chat-section">
           <div class="chat-box">
-            <div class="row">
+            <div class="row chat-box-inner">
               <div class="col-2 user-status-section">
                   <ul style="margin: 0; padding: 0; border-radius: 1rem;">
                     <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;" (click)="openChat()" 
@@ -45,6 +45,78 @@
                         </div>
                     </li>
 
+
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;" (click)="openChat()">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">M</div>
+                              <div class="live-btn-status-offline"></div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">Maria</div>
+                              <div class="user-message">name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>9:17</span></div>
+                              <div class="message-count"><span>3</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">M</div>
+                              <div class="live-btn-status-offline"></div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">Maria</div>
+                              <div class="user-message">name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>9:17</span></div>
+                              <div class="message-count"><span>3</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">M</div>
+                              <div class="live-btn-status-offline"></div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">Maria</div>
+                              <div class="user-message">name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>9:17</span></div>
+                              <div class="message-count"><span>3</span></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
+                      <!-- one user chat status section -->
+                       <div class="single-user-status">
+                            <div class="profile-pic">
+                              <div class="user-innitials">M</div>
+                              <div class="live-btn-status-offline"></div>
+                            </div>
+                            <div class="user-name-and-message">
+                              <div class="user-name">Maria</div>
+                              <div class="user-message">name of the message..</div>
+                            </div>
+                            <div class="time-and-message-count">
+                              <div class="time"><span>9:17</span></div>
+                              <div class="message-count"><span>3</span></div>
+                            </div>
+                        </div>
+                    </li>
                     <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
                       <!-- one user chat status section -->
                        <div class="single-user-status">
@@ -84,7 +156,7 @@
 
 
                     <li style="list-style: none; margin-left: 0rem;border-radius: 1rem;">
-                      <!-- one user chat status section -->
+                      <!-- single user chat status section -->
                        <div class="single-user-status">
                             <div class="profile-pic">
                               <div class="user-innitials">S</div>
@@ -157,7 +229,7 @@
                     </li>
                   </ul>
               </div>
-              <div class="col-10 user-chat-section">
+              <div class="col-10 user-chat-section" *ngIf="singleUserActive">
                 <!-- chat window header -->
                   <div class="chat-window-header">
                     <div class="chat-window-user-status">
@@ -200,4 +272,7 @@
           </div>
       </div>
   </div>
+  <div class="bottom-menu">
+    <app-bottom-menu></app-bottom-menu>
+</div>
 </section>

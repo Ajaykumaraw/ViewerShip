@@ -1,0 +1,33 @@
+
+@media (min-width:268px) and (max-width:468px) { 
+        .fl-menu-icons{
+            height: 3.6rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            background: rgb(221, 41, 41);
+            /* background: rgb(255, 254, 254); */
+            align-items: center;
+            justify-content: space-around;
+        }
+        .home-menu{
+            width: 25%;
+            height: 3.6rem;
+            display: block;
+            align-items: center;
+            text-align: center;
+            padding-top: .4rem;
+        }
+        .fl-icons{
+            font-size: 1.4rem;
+            margin: .2rem auto;
+            color: #fff;
+            /* color: rgb(182, 178, 178); */
+            border-radius: .2rem;
+        }
+        .hl{
+            color: #fff ;
+            font-size:.7rem;
+        }
+}       

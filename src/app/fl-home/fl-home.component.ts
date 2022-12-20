@@ -35,8 +35,8 @@ export class FlHomeComponent implements OnInit {
   isloggedIn:boolean = true;
   mathingItem!:any;
   isvsible: boolean = false;  //taken to dialog
-  ischvsible: boolean = false; //moved to dialog
-  hideSearchBtn:boolean = true; //moved to dialog
+  ischvsible: boolean = true; //moved to dialog
+  hideSearchBtn:boolean = false; //moved to dialog
   channelNames:string[] = ['channel list','channel list','channel list'];
   stringfiedData :any;
   parsedData:any;
@@ -913,33 +913,42 @@ export class FlHomeComponent implements OnInit {
   }
   //movied to dialog
   fetchChData(chDataObject:sendChDataToServer){
-     this.getChService.getSelectedChData(chDataObject,this.token).subscribe(data=>{
-         console.log(data);
-   // const ch_data = this.newChDetailResponse.channelRequestOutPut;
-    // const ch_data = data.channelRequestOutPut;
-    // console.log(ch_data);
-    // this.chDetailsResponse = JSON.parse(ch_data).items;
-   this.chDetailsResponse = Object.keys(data).map((e:any)=>data[e]);
-   console.log(this.chDetailsResponse);
-    this.chDetailsResponse = this.chDetailsResponse[5];
-    console.log(this.chDetailsResponse);
+   
+    const ch_data = this.newChDetailResponse.channelRequestOutPut;
+   // const ch_data = data.channelRequestOutPut;
+    console.log(ch_data);
+    this.chDetailsResponse = JSON.parse(ch_data).items;
+   
+    // working code 
+
+    // this.getChService.getSelectedChData(chDataObject,this.token).subscribe(data=>{
+    //   console.log(data);
+    // this.chDetailsResponse = Object.keys(data).map((e:any)=>data[e]);
+    // console.log(this.chDetailsResponse);
+    // this.chDetailsResponse = this.chDetailsResponse[5];
+    // console.log(this.chDetailsResponse);
+    // });  
+    // working code 
+
+
     //  }),console.error();
-  });
+  
 }
   
   fetchChDataOnPageLoad(){
-    this.getChService.getChDataOnLogin(this.userName,this.token).subscribe(data=>{
-      console.log(data.status);
-              this.userChName = data.userChannelName;
-              const ch_data2 = data.channelRequestOutPut;
-            this.chDetailsResponse = JSON.parse(ch_data2).items;
+    // this.getChService.getChDataOnLogin(this.userName,this.token).subscribe(data=>{
+    //   console.log(data.status);
+    //           this.userChName = data.userChannelName;
+    //           const ch_data2 = data.channelRequestOutPut;
+    //         this.chDetailsResponse = JSON.parse(ch_data2).items;
             
-    },error =>{
-      if(error.status === 500){       //if userChannel data not found in database 
-        this.openDialogNew();         // <-- call the dialog method to store data in database
-      }
-      console.log(error);
-    });
+    // },error =>{
+    //   if(error){
+    //   // if(error.status === 500){       //if userChannel data not found in database 
+    //     this.openDialogNew();         // <-- call the dialog method to store data in database
+    //   }
+    //   console.log(error);
+    // });
     
      // this.getChService.getSelectedChData(this.userName).subscribe(data=>{
    //      console.log(data);
@@ -947,9 +956,9 @@ export class FlHomeComponent implements OnInit {
         // if(request = !sucessful){
         //       then  openDialogNew();
         // }else{
-        //   this.userChName = this.newChDetailResponse.userChannelName;
-        //   const ch_data2 = this.newChDetailResponse.channelRequestOutPut;
-        //   this.chDetailsResponse = JSON.parse(ch_data2).items;
+          this.userChName = this.newChDetailResponse.userChannelName;
+          const ch_data2 = this.newChDetailResponse.channelRequestOutPut;
+          this.chDetailsResponse = JSON.parse(ch_data2).items;
         // }
     // if data not found then open dialog
     // now channel name and user data is available 
@@ -976,8 +985,4 @@ export class FlHomeComponent implements OnInit {
 
         }
         
-
-
-
-
 }

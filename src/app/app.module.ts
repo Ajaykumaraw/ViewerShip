@@ -25,6 +25,7 @@ import { MessageComponent } from './message/message.component';
 import { ProfileComponent } from './profile/profile.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DailogDataPass } from './model/dialogDataPass';
+import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { DailogDataPass } from './model/dialogDataPass';
     SidebarComponent,
     MessageComponent,
     ProfileComponent,
+    BottomMenuComponent,
   ],
   imports: [
     BrowserModule,

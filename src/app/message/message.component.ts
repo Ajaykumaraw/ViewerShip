@@ -8,6 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class MessageComponent implements OnInit {
 
+  singleUserActive:boolean = false;
   message:any;
 
   messageArea = new FormGroup({
@@ -27,7 +28,7 @@ export class MessageComponent implements OnInit {
   }
 
   openChat(){
-    
+    this.singleUserActive = true;
   }
 
 }

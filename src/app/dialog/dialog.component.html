@@ -1,45 +1,44 @@
-<section>
-    <div class="title-sec">
-        <h4 class="dilog-title">Configure Your Channel</h4>
-    </div>
-    <hr>
-    <div class="action-sec">
-        <input #chInput class="dg-input" type="text" matInput placeholder="Your channel name here">
-        <button class="dg-button" (click)="openResultDialog(chInput.value)" mat-raised-button>Search Your channel</button>
-    </div>
- <!-- result list -->
-    <div class="result-list" *ngIf="isvsible">
-        <div class="list-loading" *ngFor="let chname of chResponse; let i = index" (click)="showChData(chname.snippet.channelId,
-        chname.snippet.channelTitle,chname.snippet.thumbnails.medium.url)">
-            <div class="thumb">
-                <!-- chname.snippet.thumbnails.default.url -->
-                <img class="imgthumb" src="{{chname.snippet.thumbnails.medium.url}}"  alt="">
-            </div>
-            <!-- chname.snippet.channelTitle -->
-            <label for=""> {{chname.snippet.channelTitle | titlecase}}</label>
+<section class="dialog-container">
+        <div class="title-sec">
+            <h4 class="dilog-title">Configure Your Channel</h4>
         </div>
-    </div>
+        <hr>
+        <div class="action-sec">
+            <input #chInput class="dg-input" type="text" matInput placeholder="Your channel name here">
+            <button class="dg-button" (click)="openResultDialog(chInput.value)" mat-raised-button><i class="fa-sharp fa-solid fa-magnifying-glass"></i><span class="btn-text">Search Your channel</span></button>
+        </div>
+ <!-- result list -->
+        <div class="result-list" *ngIf="isvsible">
+            <div class="list-loading" *ngFor="let chname of chResponse; let i = index" (click)="showChData(chname.snippet.channelId,
+            chname.snippet.channelTitle,chname.snippet.thumbnails.medium.url)">
+                <div class="thumb">
+                    <!-- chname.snippet.thumbnails.default.url -->
+                    <img class="imgthumb" src="{{chname.snippet.thumbnails.medium.url}}"  alt="">
+                </div>
+                <!-- chname.snippet.channelTitle -->
+                <label class="ch-title-name" for=""> {{chname.snippet.channelTitle | titlecase}}</label>
+            </div>
+        </div>
      <!-- result list -->
 
-    <div class="save-ch-section" *ngIf="isChNameDisplay">
-        <div class="container">
-            <div class="left-sec">
-                <img src="{{thumUrl}}" alt="">
-            </div>
-            <div class="right-sec">
-                <div class="ch-title">
-                    <h3 #channel_name>{{chName}}</h3>
+        <div class="save-ch-section" *ngIf="isChNameDisplay">
+            <div class="container">
+                <div class="left-sec">
+                    <img src="{{thumUrl}}" alt="">
                 </div>
-                <hr class="line">
-                <div class="btn-sec">
-                    <button mat-raised-button color="primary" (click)="saveChannel(chName)" >Save Channel</button>
+                <div class="right-sec">
+                    <div class="ch-title">
+                        <h3 #channel_name>{{chName}}</h3>
+                    </div>
+                    <hr class="line">
+                    <div class="btn-sec">
+                        <button class="save-btn-dia" mat-raised-button color="primary" (click)="saveChannel(chName)" >Save Channel</button>
+                    </div>
                 </div>
             </div>
-        </div>
         <!-- <div class="chTitle">
             <h1>{{chName}}</h1>
         </div>
         <button class="savebtn" mat-raised-button color="primary">Save</button> -->
-    </div>
-
+        </div>
 </section>

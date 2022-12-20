@@ -176,3 +176,84 @@ img{
     color: rgb(0, 0, 0);
     height: 2px;
 }
+
+@media (min-width:268px) and (max-width:468px) { 
+    .dialog-container{
+        width: 100%;
+        height: 55vh;
+        margin: 0rem;
+        padding: 0rem;
+    }
+    .action-sec{
+        width: 100%;
+        display: flex;
+    }
+    .mat-dialog-container{
+        padding: .1rem;
+    }
+    .dg-button{
+        width: 20%;
+        height: 120%;
+        margin: 0rem;
+    }
+    .dg-button .btn-text{
+        padding: .3rem;
+        padding-bottom: .3rem;
+        display: none;
+    }
+    .result-list{
+        width: 70%;
+        height: 40vh;
+    }
+    .list-loading{
+        width: 100%;
+        padding-left: 0rem;
+    }
+    .thumb{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: .5rem;
+    }
+    .ch-title-name{
+        font-size: .9rem;
+    }
+    .save-ch-section{
+        width: 95%;
+        height: 6rem;
+        margin-top: 3rem;
+        padding: 0rem;
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .left-sec{
+        width: 30%;
+    }
+    .right-sec{
+        width: 70%;
+        display: block;
+        align-items: flex-start;
+    }
+    .ch-title{
+        width: 100%;
+        height: 20%;
+    }
+    .ch-title h3{
+        width: 80%;
+        font-size: .8rem;
+    }
+    .line{
+        margin: 0rem;
+    }
+    .btn-sec{
+        width: 80%;
+        margin: 1rem auto;
+        padding: 0rem;
+    }
+    .save-btn-dia{
+        width: 8rem;
+        height: 2rem;
+    }
+
+}
