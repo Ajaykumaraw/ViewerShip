@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class BottomMenuComponent implements OnInit {
 
   active:Boolean= false;
+  role!:string;
 
   constructor(private route:Router) { }
 
@@ -19,7 +20,11 @@ export class BottomMenuComponent implements OnInit {
     this.route.navigate(['/messages']);
   }
   gotoDashboard(){
-    this.route.navigate(['/user']);
+    if(this.role === 'asmkt'){
+      this.route.navigate(['/marketer']);
+    }else{
+      this.route.navigate(['/user']);
+    }
   }
   profile(){
     this.route.navigate(['/profile']);

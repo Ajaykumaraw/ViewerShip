@@ -738,12 +738,7 @@ export class MKTHomeComponent implements OnInit {
     // console.log(this.service.getData());
     this.mkt_token = localStorage.getItem('utoken');
     console.log(this.mkt_token);
-    this.fetchMktHomeData()
-
-    //   this.chDetailsResponse_ = Object.keys(this.chDetailsResponse_).map((e:any)=>this.chDetailsResponse_[e]);
-    //  console.log(this.chDetailsResponse_.length);
-    //  this.chDetailsResponse_ = this.chDetailsResponse_[5];
-    //  console.log(this.chDetailsResponse_);
+    this.fetchMktHomeData();
     
   }
 
@@ -754,10 +749,15 @@ export class MKTHomeComponent implements OnInit {
   }
 
   fetchMktHomeData(){
-      this.mktDataService.getMktData(this.mkt_token).subscribe(data=>{
-        console.log(data);
-        this.chDetailsResponse_ = Object.keys(data).map((e:any)=>data[e]);
-      })
+      // this.mktDataService.getMktData(this.mkt_token).subscribe(data=>{
+      //   console.log(data);
+      //   this.chDetailsResponse_ = Object.keys(data).map((e:any)=>data[e]);
+      // })
+
+      this.chDetailsResponse_ = Object.keys(this.chDetailsResponse_).map((e:any)=>this.chDetailsResponse_[e]);
+      console.log(this.chDetailsResponse_.length);
+      this.chDetailsResponse_ = this.chDetailsResponse_[5];
+      console.log(this.chDetailsResponse_);
 
   }
 

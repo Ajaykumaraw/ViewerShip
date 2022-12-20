@@ -1,39 +1,42 @@
-<section>
+<section class="mkt-section">
     <div class="search-bar-section">
         <div class="shape-section">
-            <div class="shap">Category</div>
-            <span></span>
+          <input class="category-text" type="text" placeholder="Find channel with category">
         </div>
-        <input type="text" placeholder="search for category">
-        <div>
-          <ul>
-            <li></li>
-          </ul>
+        <div class="search-btn-sec">
+          <button class="search-btn">Search</button>
         </div> 
-        <button class="search-btn">Search</button>
     </div>
     <div class="table-section">
         <div class="row">
             <div class="col-8 table-wrapper-scroll-y my-custom-scrollbar">
-                <table class="table table table-bordered table-striped mb-0">
+                <table class="content-table table table table-bordered table-striped mb-0">
                     <thead class="table-header">
                       <tr> 
-                        <th scope="col"></th>
-                        <th scope="col">User Name</th>
-                        <th scope="col">Channel Name</th>
-                        <th scope="col">Channel Id</th>
+                        <th class="t-heading-IC" scope="col">Channel Icon</th>
+                        <th class="t-heading" scope="col">User Name</th>
+                        <th class="t-heading" scope="col">Channel Name</th>
+                        <th class="t-heading" scope="col">Channel Id</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr class="table-row" *ngFor="let chdetails of chDetailsResponse_; let i = index" (click)="showChDetails(chdetails.chName,
+                    <tbody class="table-body">
+                      <tr class="table-row" *ngFor="let chdetails of chDetailsResponse_ ; let i = index" (click)="showChDetails(chdetails.chName,
                       chdetails.userName,chdetails.userName)">
                         <td><div class="thumbnail">
-                            <img src="{{chdetails.userName }}" alt="">
+                            <img src="{{chdetails.snippet.thumbnails.medium.url }}" alt="">
                         </div></td>
-                        <td> {{chdetails.userName | titlecase}}</td>
-                        <td> {{chdetails.chName | titlecase}}</td>
-                        <td>{{chdetails.channelId | titlecase}}</td>
+                        <td> {{chdetails.snippet.channelTitle | titlecase}}</td>
+                        <td> {{chdetails.snippet.channelTitle | titlecase}}</td>
+                        <td>{{chdetails.snippet.channelTitle | titlecase}}</td>
                       </tr>
+                      <!-- working code need to implemented -->
+                            <!-- <img src="{{chdetails.userName }}" alt="">
+                          </div></td>
+                          <td> {{chdetails.userName | titlecase}}</td>
+                          <td> {{chdetails.chName | titlecase}}</td>
+                          <td>{{chdetails.channelId | titlecase}}</td>
+                        </tr> -->
+                      <!-- working code need to implemented -->
                     </tbody>
                   </table>
             </div>
@@ -57,4 +60,7 @@
             </div>
         </div>
     </div>
+    <div class="bottom-menu">
+      <app-bottom-menu></app-bottom-menu>
+  </div>
 </section>
