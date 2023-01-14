@@ -811,7 +811,7 @@ export class FlHomeComponent implements OnInit {
         this.fetchChDataOnPageLoad();     
        //this.methodFetchLogin(); // <- Method to fetch token details contieusly
         // if(this.userChName === null || this.userChName === undefined){
-        //   this.openDialogNew();
+           this.openDialogNew();
         // }
         
 
@@ -856,23 +856,24 @@ export class FlHomeComponent implements OnInit {
 
   // fetching response
   openDialog(val:string){
-  //  this.getChService.getChlist(val).subscribe(data => {
-  //   this.chResponse = Object.keys(data).map((e:any)=> data[e]);
-  //    console.log(this.chResponse.length);
-  //    if(this.chResponse.length == 6){
-  //     this.chResponse = this.chResponse[5];
-  //     console.log(this.chResponse);
-  //    }else if(this.chResponse.length == 5){
-  //     this.chResponse = this.chResponse[4];
-  //     console.log(this.chResponse);
-  //    }
+   this.getChService.getChlist(val).subscribe(data => {
+    console.log(data);
+    this.chResponse = Object.keys(data).map((e:any)=> data[e]);
+     console.log(this.chResponse.length);
+     if(this.chResponse.length == 6){
+      this.chResponse = this.chResponse[5];
+      console.log(this.chResponse);
+     }else if(this.chResponse.length == 5){
+      this.chResponse = this.chResponse[4];
+      console.log(this.chResponse);
+     }
     
-  //  })
+   })
 
 
-    this.chResponse = Object.keys(this.response).map((e:any)=>this.response[e]);
-    console.log(this.chResponse.length);
-    this.chResponse = this.chResponse[5];
+    // this.chResponse = Object.keys(this.response).map((e:any)=>this.response[e]);
+    // console.log(this.chResponse.length);
+    // this.chResponse = this.chResponse[5];
     
     if(this.isvsible == false){
       this.isvsible = true;

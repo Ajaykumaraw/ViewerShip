@@ -137,3 +137,74 @@
     color: #fff;
     font-weight: bold;
   }
+  @media (min-width:268px)   and (max-width: 468px) { 
+      .profile-section{
+        width: 100%;
+        height: 100%;
+        margin: 0rem;
+        padding: 0rem;
+      }
+      .profile-row{
+        width: 100%;
+        height: 100%;
+        margin: 0rem;
+        padding: 0rem;
+      }
+      .profile-section-sec{
+        width: 100%;
+        height: 100%;
+        margin: 0rem;
+        border-radius: .3rem;
+      }
+      .profile-content{
+        width: 100%;
+        height: 100%;
+        margin-top: 1rem;
+        border-radius: .3rem;
+        overflow-x: hidden;
+      }
+      .profile-img-container{
+        width: 100%;
+        height: 100%;
+        margin: 0rem;
+        padding: 0rem;
+      }
+      .image-box{
+        width: 100%;
+        height: 100%;
+        margin: 0rem;
+        padding: 0rem;
+      }
+      .profile-btn{
+        display: none;
+      }
+      .profile-details-section{
+        width: 100%;
+        height: 100%;
+        margin: 0rem;
+        padding: 0rem;
+      }
+      .profile-details-content{
+        width: 100%;
+        height: 100%;
+        margin: 0rem;
+        display: block;
+      }
+      .user-name{
+        width: 100%;
+        height: 100%;
+        margin: 0rem;
+        padding: 0rem;
+        display: block;
+      }
+      .first-name-sec,.last-name-sec{
+        width: 100%;
+        height: 100%;
+        margin: .2rem auto;
+        padding-left: .5rem;
+      }
+      .sidebar{
+          display: none;
+      }
+      
+  }

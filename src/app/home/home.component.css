@@ -65,7 +65,7 @@ img{
 /* card section */
 .card-section{
     width:100%;
-    height: 50vh;
+    height: max-content;
     padding: 3rem 4.5rem;
 }
 .card-heading h3{
@@ -75,12 +75,22 @@ img{
     color: blue;
     cursor: pointer;
 }
+.incards{
+    font-family: 'Poppins',sans-serif;
+    width: 100%;
+    height: max-content;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: .1rem .1rem;
+}
 .cards{
     margin: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    background: red;
 }
 .card1{
     margin-top: 1rem;
@@ -99,7 +109,7 @@ img{
 /* mkt section */
 .mkt-section{
     width: 90%;
-    height: 90vh;
+    height: 80vh;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -115,6 +125,11 @@ img{
     position: absolute;
     top: 0;
     padding: 3rem 2rem;
+}
+.mkt-content-box{
+    width: 100%;
+    height: max-content;
+    background: yellow;
 }
 .content-box{
     padding: .1rem;
@@ -227,8 +242,60 @@ img{
 }
 
 /* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 950px) { 
+    .content{
+        margin: 2rem 4rem;
+        
+    }
+    .heading h1{
+        font-size: 4.5rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+    }
+    .incards{
+        font-family: 'Poppins',sans-serif;
+        width: 100%;
+        height: max-content;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: .1rem .1rem;
+    }
+    .card1{
+        width: 15rem;
+        height: 5rem;
+        margin: .9rem;
+        align-items: center;
+        text-align: center;
+    }
+    h4{
+        font-size: 1rem;
+    }
+}
 
-@media (min-width:268px) and (max-width:468px) { 
+@media only screen and (max-width: 750px) { 
+    .incards{
+        font-family: 'Poppins',sans-serif;
+        width: 100%;
+        height: max-content;
+        text-align: center;
+        display: block;
+        justify-content: center;
+        padding: .4rem .1rem;
+    }
+    .card1{
+        width: 18rem;
+        height: 7rem;
+        margin: .9rem auto;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 600px) { 
     .html{
         scroll-behavior: smooth;
     }

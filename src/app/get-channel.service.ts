@@ -11,9 +11,12 @@ import { loginRequestData } from './model/loginRequestDetails';
 })
 export class GetChannelService {
 
-  apiUrl:string = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&maxResults=10&q='
+  apiUrl:string = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=any&maxResults=10&q=';  // <--- orignal
+  //apiUrl:string = 'https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2Cstatistics&forUsername=';
+  // 'tseries&maxResults=5&key=[YOUR_API_KEY] HTTP/1.1'
   userInput= 'string to search';
-  typeAndkey:string ='&type=channel&key='
+  typeAndkey:string ='&type=channel&key=';  //  <--- orignal
+ // typeAndkey:string ='&maxResults=5&key='
   apiKey:string = 'AIzaSyCeLrQSGNx77l83pnVLxlHiMsT4d_8k8Z4';
   finalUrl!:string;
   header:any;
