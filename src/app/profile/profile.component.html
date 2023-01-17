@@ -3,26 +3,28 @@
         <div class="col-2 sidebar">
             <app-sidebar></app-sidebar>
         </div>
-        <div class="col-10 profile-section-sec">
+        <div class="col profile-section-sec">
             <div class="profile-content">
                 <div class="profile-img-container">
-                   <div class="row">
-                        <div class="col-4">
+                   <div class="img-container-inner" >
+                        <div class="img-container-inner-col">
                             <div class="image-box">
                                 <div class="image-inner-box">
+                                </div>
+                            </div>
 
+                            <div class="ch-btn-sect">
+                                <div class="profile-btn">
+                                    <div class="change-pic-btn">
+                                        <input  type="file" class="ch-btn" (click)="chProfileImg()" placeholder="Change Image">
+                                            <!-- <input type="file" style="display:none" (change)="handle($event)"> -->
+                                    </div>
+                                    <div class="delete-btn">
+                                        <button class="del-btn">Delete Image</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="profile-btn">
-                                <div class="change-pic-btn">
-                                    <button class="ch-btn">Change Image</button>
-                                </div>
-                                <div class="delete-btn">
-                                    <button class="del-btn">Delete Image</button>
-                                </div>
-                            </div>
+
                         </div>
                    </div>
                 </div>

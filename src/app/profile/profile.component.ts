@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
+  name = 'Angular';
+
   constructor() { }
 
   ngOnInit(): void {
   }
+  chProfileImg(){
+    // document.querySelector('input')?.click();
+  }
+  // handle(e:Event){
+  //   console.log('Change input file');
+  // }
 
 }

@@ -122,50 +122,60 @@ img{
     border-radius: 2rem;
 }
 .mkt-content{
+    width: 100%;
+    height: max-content;
     position: absolute;
     top: 0;
     padding: 3rem 2rem;
+    overflow: hidden;
 }
 .mkt-content-box{
     width: 100%;
     height: max-content;
-    background: yellow;
 }
 .content-box{
     padding: .1rem;
     width: 45%;
+    height: max-content;
 }
 .mkt-heading{
     width: 14rem;
     padding: .5rem;
     margin-bottom: 1rem;
-    background: rgba(190, 189, 189, 0.548);
+    background: rgba(3, 3, 3, 0.548);
 }
-.heading h2{
+.mk-heading h2{
+    width: max-content;
     font-size: 3rem;
     font-weight: 700;
     padding: 1rem;
     border-radius: 1rem;
     margin-top: 2rem;
-    background: rgba(190, 189, 189, 0.548);
+    background: rgba(3, 3, 3, 0.548);
 }
 .mkt-subheading{
-    margin-top: 3rem;
+    width: max-content;
+    font-size: 1.5rem;
+    margin-top: 2rem;
     padding: 1rem;
     border-radius: 1rem;
-    background: rgba(190, 189, 189, 0.548);
+    background: rgba(3, 3, 3, 0.548);
 }
 .mkt-card-section{
-    margin: 4rem 0rem;
+    width: 100%;
+    height: 10rem;
+    margin: .2rem 0rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .mkt-card{
-    padding: 2rem;
+    font-family: 'Poppins',sans-serif;
+    padding: 1rem;
     background: rgba(243, 60, 60, 0.801);
     margin-right: 6rem;
     border-radius: 1rem;
+    font-size: .6rem;
 }
 
 .divider{
@@ -271,6 +281,56 @@ img{
     h4{
         font-size: 1rem;
     }
+        
+    .mkt-content{
+        width: 100%;
+        height: 80vh;
+        position: absolute;
+        top: 0;
+        padding: 3rem 2rem;
+        overflow: hidden;
+    }
+    .mkt-content-box{
+        width: 100%;
+        height: max-content;
+    }
+    .mkt-heading{
+        font-size: 1rem;
+        padding: .5rem;
+        margin-bottom: 1rem;
+        border-radius: .5rem;
+        background: rgba(3, 3, 3, 0.548);
+    }
+    .mk-heading h2{
+        width: max-content;
+        font-size: 2rem;
+        font-weight: 700;
+        padding: 1rem;
+        border-radius: .5rem;
+        margin-top: 2rem;
+        background: rgba(3, 3, 3, 0.548);
+    }
+    .mkt-subheading{
+        width: max-content;
+        font-size: 1rem;
+        margin-top: 2rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        background: rgba(3, 3, 3, 0.548);
+    }
+    .mkt-card-section{
+        visibility: hidden;
+        
+    }
+    .mkt-card{
+        display: none;
+    }
+
+    .fl-card-section{
+        display: none;
+    }
+
+
 }
 
 @media only screen and (max-width: 750px) { 
@@ -290,6 +350,66 @@ img{
         align-items: center;
         text-align: center;
     }
+    
+    .mkt-content{
+        width: 100%;
+        height: 80vh;
+        position: absolute;
+        top: 0;
+        padding: 3rem 2rem;
+        overflow: hidden;
+    }
+    .mkt-content-box{
+        width: 100%;
+        height: 100%;
+    }
+    .content-box{
+        padding: .1rem;
+        width: 45%;
+    }
+    .mkt-heading{
+        font-size: 1rem;
+        padding: .5rem;
+        margin-bottom: 1rem;
+        border-radius: .5rem;
+        background: rgba(3, 3, 3, 0.548);
+    }
+    .mk-heading h2{
+        width: max-content;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 1rem;
+        border-radius: .5rem;
+        margin-top: 1rem;
+        background: rgba(3, 3, 3, 0.548);
+    }
+    .mkt-subheading{
+        width: max-content;
+        max-width: 80%;
+        font-size: 1rem;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        background: rgba(3, 3, 3, 0.548);
+    }
+    .mkt-card-section{
+        display: none;
+        width: 100%;
+        height: 10rem;
+        margin: .2rem 0rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mkt-card{
+        font-family: 'Poppins',sans-serif;
+        padding: 1rem;
+        background: rgba(243, 60, 60, 0.801);
+        margin-right: 6rem;
+        border-radius: 1rem;
+        font-size: .6rem;
+    }
+
+
 }
 
 
@@ -360,58 +480,76 @@ img{
 
     .mkt-section{
         width: 100%;
-        height: 100%;
+        height: max-content;
+        max-width: 80vh;
         padding: 0rem;
+        margin: 0rem;
     }
     .mkt-img{
         width: 100%;
         margin: 0rem;
     }
+    
     .mkt-content{
         width: 100%;
-        padding: 0rem;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        overflow: hidden;
     }
     .mkt-content-box{
         width: 100%;
-        height: 100%;
-        padding-left: 1rem;
+        height: 120%;
+        margin-top: -2.5rem;
+        margin-left: -1.8rem;
+    }
+    .content-box{
+        padding: .1rem;
+        width: 45%;
     }
     .mkt-heading{
-        width: 9rem;
-        height: 1rem;
-        font-size: .8rem;
-        margin-left: .1rem;
-        margin-top: .6rem;
-        padding: 0rem;
-        transition: all 3s ease;
-        background: rgba(49, 49, 49, 0.548);
-    }
-    .mk-heading{
-        width: 40%;
-        height: 2rem;
-        margin-top: .1rem;
+        width: max-content;
+        height: max-content;
+        font-size: 80%;
+        padding: .1rem;
+        margin-bottom: .3rem;
         border-radius: .2rem;
-        padding: .2rem;
-        background: rgba(49, 49, 49, 0.548);
+        background: rgba(3, 3, 3, 0.548);
     }
     .mk-heading h2{
-        font-size: .8rem;
-        font-weight: 100;
+        width: max-content;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: .2rem;
+        border-radius: .5rem;
+        margin-top: .6rem;
+        background: rgba(3, 3, 3, 0.548);
     }
     .mkt-subheading{
-        padding: .3rem;
-        width: 76%;
-        height: 4.8rem;
-        margin-top: 1rem;
-        border-radius: .2rem;
-        background: rgba(49, 49, 49, 0.548);
-    }
-    .mkt-subheading p{
-        font-size: .9rem;
+        max-width: 100%;
+        font-size: .6rem;
+        margin-top: .6rem;
+        padding: .2rem;
+        border-radius: 1rem;
+        background: rgba(3, 3, 3, 0.548);
     }
     .mkt-card-section{
         display: none;
+        width: 100%;
+        height: 10rem;
+        margin: .2rem 0rem;
+        align-items: center;
+        justify-content: space-between;
     }
+    .mkt-card{
+        font-family: 'Poppins',sans-serif;
+        padding: 1rem;
+        background: rgba(243, 60, 60, 0.801);
+        margin-right: 6rem;
+        border-radius: 1rem;
+        font-size: .6rem;
+    }
+
 
     /* divider */
     .divider{
@@ -494,7 +632,17 @@ img{
         width: 100%;
         height: 100%;
         margin: 0rem;
-        background: yellow;
         padding: 0rem;
     }
+}
+
+
+@media only screen and (max-width: 450px) { 
+    .content{
+        margin: 2rem 1rem;
+    }
+    .heading h1{
+        font-size: 3.5rem;
+    }
+
 }

@@ -10,6 +10,7 @@ export class MessageComponent implements OnInit {
 
   singleUserActive:boolean = false;
   message:any;
+  statusClass:string = 'default-message';
 
   messageArea = new FormGroup({
     UserMassage:new FormControl(''),
@@ -31,4 +32,8 @@ export class MessageComponent implements OnInit {
     this.singleUserActive = true;
   }
 
+  // hideSingleChat(){
+  //   console.log('clicked');
+  //   this.statusClass = 'default-message-hide';
+  // }
 }

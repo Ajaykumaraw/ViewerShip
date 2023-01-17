@@ -1,27 +1,30 @@
-.sidebar{
-    width: 18%;
-  }
   .profile-section{
-    width: 81%;
-    height: 95vh;
-    background: #eee;
+    width: 100%;
+    height: 90vh;
+    background: #fff;
     margin-left: .5rem;
   }
+  .profile-row{
+    width: 100%;
+    height: 90vh;
+  }
+  .sidebar{
+    width: 18%;
+    background: rgb(240, 237, 237);
+  }
   .profile-content{
-    width: 95%;
+    width: 80%;
     height: 35rem;
-    background: #fff;
-    border-radius: 1rem;
-    margin: 2rem auto;
-    padding: 1rem;
-    overflow: scroll;
+    border-radius: .2rem;
+    margin: .3rem;
+    padding-top: .2rem;
   }
   .profile-img-container{
     width: 80%;
     height: 12rem;
     background: rgb(241, 236, 236);
-    border-radius: 1rem;
-    margin: .1rem auto;
+    border-radius: .2rem;
+    margin: .1rem;
   }
   .image-box{
     width: 12rem;
@@ -46,20 +49,18 @@
     height: 10rem;
     background: rgb(248, 246, 246);
     border-radius: 50%;
-    background:red;
     margin: 1rem auto;
     
   }
   .profile-btn{
     margin-top: 2rem;
+    margin-left: 2rem;
   }
   .change-pic-btn .ch-btn{
     width: 10rem;
     height: 2.7rem;
-    background:  rgb(221, 20, 20);
     border-radius: .4rem;
     padding: .5rem 1rem;
-    border: none;
     color: #fff;
   }
   .delete-btn .del-btn{
@@ -72,14 +73,14 @@
   }
   .profile-details-section{
     width: 80%;
-    height: 20rem;
+    height: max-content;
     background: rgb(241, 236, 236);
     border-radius: 1rem;
     margin: .5rem auto;
   }
   .profile-details-content{
     width: 100%;
-    height: 100%;
+    height: max-content;
     align-items: center;
     padding-top: 1rem;
   }
@@ -97,10 +98,9 @@
     border: none;
     width: 15rem;
     height: 3rem;
-    border-radius: .5rem;
+    border-radius: .2rem;
     padding-left: 1rem;
     outline: none;
-    box-shadow: 1px 1px 1px 1px #bbbbbb;
   }
   .mobile-no{
     width: 70%;
@@ -117,28 +117,179 @@
     border: none;
     width: 15rem;
     height: 3rem;
-    border-radius: .5rem;
+    border-radius: .2rem;
     padding-left: 1rem;
     outline: none;
-    box-shadow: 1px 1px 1px 1px #bbbbbb;
   }
   .save-btn-sec{
-    float: right;
-    margin-right: 1rem;
+    width: 100%;
+    background: rgb(241, 236, 236);
   }
   .save-btn{
     width: 10rem;
     height: 2.7rem;
     background: rgb(230, 26, 26);
-    border-radius: .4rem;
+    border-radius: .2rem;
     padding: .5rem 1rem;
     margin-top: 1rem;
     border: none;
     color: #fff;
     font-weight: bold;
   }
-  @media (min-width:268px)   and (max-width: 468px) { 
-      .profile-section{
+ .bottom-menu{
+  display: none;
+ }
+
+
+  @media only screen and (max-width: 650px) { 
+    .profile-section{
+      width: 100%;
+      height: 100%;
+      margin: 0rem;
+      padding: 0rem;
+    }
+    .profile-row{
+      width: 100%;
+      height: 100%;
+      margin: 0rem;
+      padding: 0rem;
+    }
+    .profile-section-sec{
+      width: 100%;
+      height: 100%;
+      margin: 0rem;
+      border-radius: .3rem;
+    }
+    .profile-content{
+      width: 100%;
+      height: 100%;
+      margin-top: 1rem;
+      border-radius: .3rem;
+      overflow-x: hidden;
+
+    }
+    .profile-img-container{
+      width: 100%;
+      height: 70%;
+      margin: 0rem;
+      padding: 0rem;
+    }
+    .img-container-inner{
+      width: 100%;
+      height: 10rem;
+      border-radius: .2rem;
+
+    }
+    .img-container-inner-col{
+      width: 20rem;
+      margin: .1rem auto;
+      height: max-content;
+      background: yellow;
+      display: block;
+    }
+    .image-box{
+      width: 6rem;
+      height: 6rem;
+      margin: .2rem auto;
+    }
+    .image-inner-box{
+      width: 5.7rem;
+      height: 5.7rem;
+      margin: .1rem;
+    }
+    .ch-btn-sect{
+      width: 100%;
+      height: 4rem;
+      
+    }
+    .profile-btn{
+      width: 100%;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 0rem;
+      font-size: .5rem;
+    }
+    .change-pic-btn .ch-btn{
+      width: 6rem;
+      height: 2.5rem;
+    }
+    .delete-btn .del-btn{
+      width: 6rem;
+      height: 2.5rem;
+      margin: 0rem;
+    }
+    .profile-details-section{
+      width: 100%;
+      height: max-content;
+      margin-top: 1rem;
+      padding: 0rem;
+      border-radius: .2rem;
+    }
+    .profile-details-content{
+      width: 17rem;
+      height: max-content;
+      margin: .1rem auto;
+      padding-bottom: 1rem;
+      display: block;
+
+    }
+    .user-name{
+      width: 100%;
+      height: 100%;
+      margin: 0rem;
+      padding: 0rem;
+      display: block;
+    }
+    .first-name-sec,.last-name-sec{
+      width: 100%;
+      height: 100%;
+      font-size: .7rem;
+      margin: .2rem auto;
+      padding-left: .5rem;
+    }
+    .firstname, .lastname{
+      width: 90%;
+      height: 2rem;
+      margin: .1rem auto;
+    }
+    .mobile-no{
+      width: 100%;
+      height: 100%;
+      margin: .2rem auto;
+      padding-left: .5rem;
+      font-size: .7rem;
+    }
+    .content-mb{
+      width: 100%;
+    }
+    .mb-number{
+      width: 90%;
+      height: 2rem;
+      margin: .1rem auto;
+    }
+    .save-btn-sec{
+      width: 100%;
+      background: rgb(241, 236, 236);
+    }
+    .save-btn{
+      width: 4rem;
+      height: 2rem;
+      font-size: .7rem;
+    }
+    .sidebar{
+        display: none;
+    }
+    .bottom-menu{
+      display: flex;
+    }
+    
+  }
+
+
+  @media only screen and (max-width: 450px) { 
+    .profile-section{
         width: 100%;
         height: 100%;
         margin: 0rem;
@@ -162,33 +313,70 @@
         margin-top: 1rem;
         border-radius: .3rem;
         overflow-x: hidden;
+
       }
       .profile-img-container{
         width: 100%;
-        height: 100%;
+        height: 70%;
         margin: 0rem;
         padding: 0rem;
+      }
+      .img-container-inner .img-container-inner-col{
+        width: 100%;
+        height: 10rem;
+        border-radius: .2rem;
+
+      }
+      .img-container-inner-col{
+        display: block;
       }
       .image-box{
+        width: 6rem;
+        height: 6rem;
+        margin: .2rem auto;
+      }
+      .image-inner-box{
+        width: 5.7rem;
+        height: 5.7rem;
+        margin: .1rem;
+      }
+      .ch-btn-sect{
         width: 100%;
-        height: 100%;
-        margin: 0rem;
-        padding: 0rem;
+        height: 4rem;
+        
       }
       .profile-btn{
-        display: none;
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0rem;
+        font-size: .5rem;
+      }
+      .change-pic-btn .ch-btn{
+        width: 6rem;
+        height: 2.5rem;
+      }
+      .delete-btn .del-btn{
+        width: 6rem;
+        height: 2.5rem;
+        margin: 0rem;
       }
       .profile-details-section{
         width: 100%;
-        height: 100%;
-        margin: 0rem;
+        height: max-content;
+        margin-top: 1rem;
         padding: 0rem;
+        border-radius: .2rem;
       }
       .profile-details-content{
-        width: 100%;
-        height: 100%;
-        margin: 0rem;
+        width: 17rem;
+        height: max-content;
+        margin: .1rem auto;
+        padding-bottom: 1rem;
         display: block;
+
       }
       .user-name{
         width: 100%;
@@ -200,11 +388,45 @@
       .first-name-sec,.last-name-sec{
         width: 100%;
         height: 100%;
+        font-size: .7rem;
         margin: .2rem auto;
         padding-left: .5rem;
       }
+      .firstname, .lastname{
+        width: 90%;
+        height: 2rem;
+        margin: .1rem auto;
+      }
+      .mobile-no{
+        width: 100%;
+        height: 100%;
+        margin: .2rem auto;
+        padding-left: .5rem;
+        font-size: .7rem;
+      }
+      .content-mb{
+        width: 100%;
+      }
+      .mb-number{
+        width: 90%;
+        height: 2rem;
+        margin: .1rem auto;
+      }
+      .save-btn-sec{
+        width: 100%;
+        background: rgb(241, 236, 236);
+      }
+      .save-btn{
+        float:right;
+        width: 4rem;
+        height: 2rem;
+        font-size: .7rem;
+      }
       .sidebar{
           display: none;
+      }
+      .bottom-menu{
+        display: flex;
       }
       
   }

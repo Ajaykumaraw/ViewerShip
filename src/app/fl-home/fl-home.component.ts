@@ -969,12 +969,12 @@ export class FlHomeComponent implements OnInit {
 
 
 
-  tgMenu(){
-    if(this.item){
-      this.item=false;
-    }else this.item=true;
+  // tgMenu(){
+  //   if(this.item){
+  //     this.item=false;
+  //   }else this.item=true;
     
-  }
+  // }
 
    methodFetchLogin(){
     setTimeout(this.methodFetchLogin, 5000);

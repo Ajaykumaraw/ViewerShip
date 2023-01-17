@@ -1,20 +1,36 @@
 <section class="sidebar">
     <div class="navigation">
             <div class="profile-sect">
-                <div class="img-sec">
+                <div class="single-user-status">
+                    <div class="profile-pic">
+                      <div class="user-innitials">JD</div>
+                      <div class="live-btn-status-active"></div>
+                    </div>
+                    <div class="user-name-and-message">
+                      <div class="user-name">{{userChName}}</div>
+                      <div class="user-message">{{userChName}}</div>
+                    </div>
+                    <!-- <div class="time-and-message-count">
+                      <div class="time"><span>9:00</span></div>
+                      <div class="message-count"><span>5</span></div>
+                    </div> -->
+                </div>
+                <!-- <div class="img-sec">
                     <img class="profile-img" src=".//src/assets/cover4.jpg" alt="">
                 </div>
                 <div class="uname">
                     <h5 style="font-weight: 700;">{{userName}}</h5>
                     <p>{{userChName}}</p>
-                </div>
+                </div> -->
+            </div>
+            <div class="nav-lable">
+                <label for="">Navigation</label>
             </div>
             <ul>
-                <hr>
-                <li  (click)="gotoDashboard()" id="dashboard"><i class="fa fa-home" aria-hidden="true"></i>Dashboard</li>
-                <li (click)="gotoMessage()" #nvlinks id="Messages"><i class="fa fa-commenting" aria-hidden="true"></i>Messages</li><hr>
-                <li  (click)="profile()" id="Profile"><i class="fa fa-user" aria-hidden="true"></i>Profile</li>
-                <li  #nvlinks id="h_and_p"><i class="fa fa-question-circle" aria-hidden="true"></i>Help & support</li>
+                <li  (click)="gotoDashboard()" id="dashboard"><i class="fa fa-home sd-icon"></i>Dashboard</li>
+                <li (click)="gotoMessage()" #nvlinks id="Messages"><i class="fa fa-commenting sd-icon" aria-hidden="true"></i>Messages</li>
+                <li  (click)="profile()" id="Profile"><i class="fa fa-user sd-icon" aria-hidden="true"></i>Profile</li>
+                <li  #nvlinks id="h_and_p"><i class="fa fa-question-circle sd-icon" aria-hidden="true"></i>Help & support</li>
             </ul>
     </div>
         <!-- <div class="profile-box">

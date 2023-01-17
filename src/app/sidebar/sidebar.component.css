@@ -1,25 +1,130 @@
 .sidebar{
-    position: relative;
-    margin-top: 2rem;
-}
-.navigation ul{
     width: 100%;
-    height: 5rem;
-    padding-left: 1rem;
-    width: 100%;
+    height: 90vh;
+    background:rgb(236, 54, 54);
+    margin-top: -1rem;
+    padding-top: .1rem;
+    color: #fff;
 }
-li{
+.profile-sect{
+    width: 100%;
+    height: 100%;
+    margin: 1rem .5rem;
+   text-align: center;
+   background:#fff;
+   border-radius: .5rem;  
+}
+
+/* <!-- one user chat status section --> */
+
+.single-user-status{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    padding-left: .5rem;
+    background: rgb(240, 67, 67);
+  }
+  .profile-pic{
+    width: 3rem;
+    height: 3rem;
+    background: rgb(230, 180, 180);
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+  }
+  .live-btn-status-active{
+    width: .6rem;
+    height: .6rem;
+    margin: 0rem .3rem;
+    margin-top: -.3rem;
+    border-radius: 50%;
+    background: green;
+    float: right;
+  }
+  
+  .live-btn-status-offline{
+    width: .6rem;
+    height: .6rem;
+    margin: 0rem .3rem;
+    margin-top: -.3rem;
+    border-radius: 50%;
+    background: rgb(182, 192, 182);
+    float: right;
+  }
+  
+  .user-innitials{
+    margin-top: .6rem;
+    margin-left: .2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  .user-name-and-message{
+    width: 8rem;
+    height: 3rem;
+    margin-left: .5rem;
+  }
+  .user-name{
+    margin-top: .2rem;
+    font-weight: bold;
+  
+  }
+  .user-message{
+    width: 8rem;
+    height: 1.3rem;
+    margin-top: -.1rem;
+    font-size: .8rem;
+    overflow: hidden;
+  }
+  .time-and-message-count{
+    height: 3rem;
+    width: 2.5rem;
+    text-align: center;
+    align-items: center;
+  }
+  .time{
+    padding: .2rem;
+    font-size: .8rem;
+    font-weight: bold;
+  }
+  .message-count{
+    text-align: center;
+    width: 1.4em;
+    height: 1.1rem;
+    font-size: .8rem;
+    font-weight: bold;
+    background: rgb(252, 151, 68);
+    border-radius: 50%;
+    margin-left: .6rem;
+    text-align: center;
+  }
+  .navigation ul{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: .5rem;
+  } 
+  li{
     width: 100%;
     list-style: none;
     padding: .5rem;
-    color: rgb(22, 18, 18);
+    color: rgb(255, 255, 255);
     cursor: pointer;
+    font-size: .8rem;
+    font-weight: bold;
+}
+li .sd-icon{
+    width: 1.6rem;
+    height: 1.5rem;
+    padding: .3rem .4rem;
+    color: #fff;
+    background: #a02020;
+    border-radius: 50%;
 }
 
 .navigation ul li:hover{
-    background: #aba3e4;
-    border-radius: .5rem;
-    color: rgb(19, 18, 18);
+    background: #a02020;
+    border-radius: .1rem .9rem .9rem .1rem;
+    color: #fff;
 }
 
 .fa{
@@ -33,14 +138,19 @@ li{
     background: #eee;
     border-radius: .5rem;
 }
-.profile-sect{
+
+.nav-lable{
     width: 100%;
-    height: 100%;
-    margin: 1rem .5rem;
-   text-align: center;
-   background:#fff;
-   border-radius: .5rem;
-   
+    height: 1.7rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(245, 238, 238);
+    background: #a02020;
+    margin: .5rem;
+    padding-left: 1rem;
+}
+.nav-lable label{
+    margin: .2rem;
 }
 .img-sec{
     width: 100%;
