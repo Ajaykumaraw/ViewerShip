@@ -3,73 +3,62 @@
         <div class="bottom-menu">
             <app-bottom-menu></app-bottom-menu>
         </div>
-        <div class="row toggle-btn-sect">
+    </div>
+        <div class="fl-section">
             <!-- section -->
-                <div class="col-2" [ngClass]="{'col-2':item,'tgsidebar':!item}">
+                <div class="fl-sidebar-container">
                     <!-- <div class="tg-btn" (click)="tgMenu()"[ngClass]="{'tg-btn':item,'tg-btn-op':!item}">
                         <i class="fa-solid fa-arrow-left"></i>
                     </div> -->
                     <app-sidebar class="fl-sidebar" [userName]="userName" [userChName]="userChName"></app-sidebar>
                 </div>
-            <!-- section -->
-                <div class="col flex-column colm-timeline second-sec">
-                    <div class="title">
-                        <!-- section -->
-                        <div class="row">
-                            <div class="col flex-column ti-sect">
-                                <!-- section -->
-                                <div class="row ti-row">
-                                    <div class="col-md-6 search-box-result" *ngIf="ischvsible">
-                                        <label class="ch-name">{{userChName}} </label>
-                                            <div class="subscount">
-                                                <label for="">12.3k</label>
-                                            </div>
-                                            <div class="videosCount">
-                                                <label for="">180</label>
-                                            </div>
-                                            <!-- <div class="editbtn">
-                                                <button (click)="editMethod()">Edit</button>
-                                            </div> -->
-                                    </div>
-                                    <div class="col-md-6 search-box" *ngIf="hideSearchBtn">
-                                        <label class="ch-name">Channel Name</label>
-                                        <mat-form-field>
-                                            <input #chInput matInput type="text" class="ch-input">
-                                        </mat-form-field>
-                                        <button mat-raised-button (click)="openDialog(chInput.value)">Search Channel</button>
-                                    </div>
-                                <!-- section -->
-
-                                <!-- section -->
-                                    <!-- result list -->
-                                    <div class="result-list" *ngIf="isvsible">
-                                        <div class="list-loading" *ngFor="let chname of chResponse; let i = index" (click)="showChData(chname.snippet.channelId,chname.snippet.channelTitle)">
-                                            <div class="thumb">
-                                                <!-- chname.snippet.thumbnails.default.url -->
-                                                <img class="imgthumb" src="{{chname.snippet.thumbnails.default.url}}"  alt="">
-                                            </div>
-                                            <!-- chname.snippet.channelTitle -->
-                                            <label for="">{{i}} {{chname.snippet.channelTitle | titlecase}}</label>
-                                        </div>
-                                    </div>
-                                <!-- section -->
-                            <div class="col-md-6"></div>
-                                <!-- section -->
+                <div class="fl-home-container">
+                    <div class="fl-card-section">
+                        <div class="ch-name fl-cards">
+                            <div class="fl-card-content">
+                                <div class="ch-title">{{userChName}}</div>
+                                <div class="ch-title-lable">{{userChName}}</div>
+                            </div>
+                        </div>
+                        <div class="ch-subCount fl-cards">
+                            <div class="fl-card-content">
+                                <div class="ch-title">{{userChName}}</div>
+                                <div class="ch-title-lable">{{userChName}}</div>
+                            </div>
+                        </div>
+                        <div class="ch-totalVd fl-cards">
+                            <div class="fl-card-content">
+                                <div class="ch-title">{{userChName}}</div>
+                                <div class="ch-title-lable">{{userChName}}</div>
+                            </div>
+                        </div>
+                        <div class="ch-createdOn fl-cards">
+                            <div class="fl-card-content">
+                                <div class="ch-title">{{userChName}}</div>
+                                <div class="ch-title-lable">{{userChName}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ch-vd-section">
+                         <div class="content-sec">
+                            <div class="row vd-detail-sec">
+                                <div class="col-auto vd-sect" *ngFor="let chdetails of chDetailsResponse; let i = index">
+                                    <img class="vid-thumb" src="{{chdetails.snippet.thumbnails.high.url}}" alt="">
+                                    <label for="vd-title">{{chdetails.snippet.title | titlecase}}</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-                <!-- section -->
-                    <div class="content-sec">
+                    <!-- <div class="content-sec">
                         <div class="row vd-detail-sec">
                             <div class="col-auto vd-sect" *ngFor="let chdetails of chDetailsResponse; let i = index">
                                 <img class="vid-thumb" src="{{chdetails.snippet.thumbnails.high.url}}" alt="">
                                 <label for="vd-title">{{chdetails.snippet.title | titlecase}}</label>
                             </div>
                         </div>
-                    </div>
-                <!-- section -->
-          </div>
+                    </div> -->
+             <!-- section -->
         </div>
-    </div>
 </section>
+

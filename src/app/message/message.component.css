@@ -6,6 +6,9 @@
 }
 .sidebar{
   width: 18%;
+  margin: 0rem;
+  padding: 0rem;
+  background: yellow;
 }
 .chat-section{
   width: 81%;

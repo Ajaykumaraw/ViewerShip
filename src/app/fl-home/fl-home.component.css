@@ -1,34 +1,88 @@
 .fl-home-section{
     width: 100%;
     height: 90vh;
-    overflow-y: hidden;
+    background: violet;
 }
-.row{
-    padding: .1rem;
+.fl-section{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: orange;
 }
-.col-2{
-    width: 18%;
+.fl-sidebar-container{
+    width: 16%;
     height: 90vh;
     margin: 0rem;
     padding: 0rem;
     background:rgb(236, 54, 54);
 }
 .fl-sidebar{
-    height: 100%;
+    width: 16%;
+    height: 90vh;
     margin: 0rem;
     padding: 0rem;
-    background: rgb(255, 255, 255);
+    position: fixed;
 }
+.fl-home-container{
+    width: 90%;
+    height: 90vh;
+    margin-left: .1rem;
+    padding-left: .4rem;
+    padding-top: 1rem;
+    background: #fff;
+    display: block;
+}
+.fl-card-section{
+    width: 98%;
+    height: 6rem;
+    margin: .1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.fl-cards{
+    width: 20%;
+    height: 5.5rem;
+    background: linear-gradient(to right,var(--secondary-color), rgb(255, 81, 0));
+    border-radius: .2rem;
+}
+.fl-card-content{
+    width: 80%;
+    height: 4rem;
+    margin: .7rem auto;
+    color: #fff;
+    display: block;
+    justify-content: space-between;
+}
+.ch-title{
+    font-size: 1rem;
+    margin: .5rem;
+    font-weight: bold;
+}
+.ch-title-lable{
+    font-size: .8rem;
+    margin: .5rem;
+    font-weight: bold;
+}
+.ch-vd-section{
+    width: 93%;
+    height: 70vh;
+    margin: 1rem auto;
+}
+
 .content-container .bottom-menu{
     display: none;
 }
 .colm-timeline{
-    width: 100%;
+    width: 50%;
     height: 100vh;
-    background: #f0f5f5;
+    background: blue;
     display: flex;
     text-align: center;
     position: static;
+
 }
 .search-box{
     width: 50%;
@@ -212,9 +266,6 @@ ul{
     padding: .4rem;
     margin-top: -.1rem;
 }
-.tgsidebar{
-    width: 8%;
-}
 .tg-btn-op{
     width: 1rem;
     height: 2rem;
@@ -341,14 +392,8 @@ ul{
     .content-container .bottom-menu{
         display: flex;
     }
-    .toggle-btn-sect{
-       
-    }
     .col-2{
         display: none;
-    }
-    .second-sec{
-       /* background: green; */
     }
     .title{
         /* background: violet; */
