@@ -1,26 +1,48 @@
 section{
     width: 100%;
     height: 100vh;
-    background: #fff;
+}
+.mkt-section{
+    /* display: fle; */
+}
+.content-box{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+.sidebar{
+    width: 16%;
 }
 .search-bar-section{
-    width: 70%;
-    height: 10rem;
-    margin-top: 5rem;
-    padding: 5rem 7rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-.shape-section{
     width: 100%;
+    height: 5rem;
+}
+.search-bar-inner{
+    width: 70%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+}
+.shape-section{  /*   input outer */
+    width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: -18rem;
 }
-.shap{
+.search-btn-sec{
+    width: 30%;    
+    height: 5rem;
+    margin: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.search-btn-sec .search-btn{
+    width: 100%;
+    height: 2.5rem;
+}
+/* .shap{
     width: 8rem;
     padding: .5rem 1.5rem;
     background: var(--secondary-color);
@@ -33,21 +55,25 @@ span{
     background:#fff;
     border-radius: 1.5rem;
     margin-left: -1.9rem;
+} */
+.shape-section{
+    padding-right: .1rem;
+    
 }
-.search-bar-section input{
-    width: 60%;
+.shape-section input{
+    width: 90%;
     border: none;
     padding: .5rem 1.4rem;
     background: #eee;
-    border-radius: 1.5rem;
-    margin-left: -27rem;
+    border-radius: .3rem;
+    margin-left: 1rem;
 }
-button{
-    width: 20%;
+
+.search-btn-sec .search-btn{
+    width: 70%;
     border: none;
     padding: .5rem;
-    border-radius: 1.5rem;
-    margin-left: -7rem;
+    border-radius: .2rem;
     background: var(--secondary-color);
     color: #fff;
 }
@@ -134,7 +160,11 @@ img{
     margin: 1rem;
     padding-right: 2rem;
 }
-@media (min-width:268px) and (max-width:468px) { 
+.bottom-menu{
+    display: none;
+}
+
+@media only screen and (max-width: 450px) { 
     .mkt-section{
         width: 100%;
         margin: 0rem;
@@ -155,7 +185,7 @@ img{
         width: 70%;
         padding: 0rem;
     }
-    .shape-section input{
+    /* .shape-section input{
         width: 100%;
         height: 2.4rem;
         margin: 0rem;
@@ -163,7 +193,7 @@ img{
         border-radius: .3rem;
         border: 1px solid black;
         
-    }
+    } */
     .search-btn-sec{
         width: 30%;
         margin: 0rem;

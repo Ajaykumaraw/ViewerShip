@@ -1,0 +1,57 @@
+<section class="mkt-cmp">
+    <div class="content-box">
+        <div class="sidebar">
+          <app-sidebar [role]="role"></app-sidebar>
+        </div>
+        <div class="mkt-camp">
+            <div class="crtcmp">
+                <button (click)="crtCamp()">Create Campaign +</button>
+                <button (click)="crtCamp()">My Campaign</button>
+            </div>    
+            <div class="crtCmapFrm" *ngIf="crtcm">
+                <label for="" class="crtlable">Create Campaign</label>
+                <form action="" [formGroup]="compDatafr">
+                    <div class="frtRow">
+                        <div class="cmName">
+                            <input type="text" formControlName="cmName" placeholder="Campaign name" class="brdr">
+                        </div>
+                        <div class="cmAmt">
+                            <input type="text" formControlName="cmAmt"  placeholder="Budget" class="brdr">
+                        </div>
+                        <div class="nomCh">
+                            <input type="number" formControlName="nomCh" placeholder="No.Of Channels" class="brdr">
+                        </div>
+                    </div>
+                    <div class="sndRow">
+                        <div class="cmName">
+                            <textarea name="" formControlName="prdDec"  id="" cols="20" rows="2" placeholder="Product Description"  class="brdr"></textarea>
+                        </div>
+                        <div class="cmAmt">
+                            <input type="number" formControlName="minSubC" placeholder="Minimum Subscriber"  class="brdr">
+                        </div>
+                        <div class="nomCh">
+                            <input type="number"  formControlName="cmpDur" placeholder="Duration"  class="brdr">
+                        </div>
+                    </div>
+                    <div class="thdRow">
+                        <div class="prdIm">
+                            <div class="lb">
+                                <label for="">Product Iamges</label>
+                            </div>
+                            <div class="in">
+                                <input type="file" formControlName="prdImg" name="" id="">
+                            </div>
+                        </div>
+                        <div class="paySt">
+                            <button (click)="payStartCam()" class="paybtn">Pay & Start</button>
+                        </div>
+                    </div>
+                </form>
+            </div>         
+           
+        </div>
+    </div> 
+    <!-- <div class="bottom-menu">
+        <app-bottom-menu></app-bottom-menu>
+      </div>    -->
+  </section>

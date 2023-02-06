@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CamPComponent } from './cam-p/cam-p.component';
 import { FlHomeComponent } from './fl-home/fl-home.component';
+import { FlcamPComponent } from './flcam-p/flcam-p.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MessageComponent } from './message/message.component';
@@ -18,6 +20,8 @@ const routes: Routes = [
   {path:"preregister",component:PreRegisterComponent},
   {path:"messages",component:MessageComponent},
   {path:"profile",component:ProfileComponent},
+  {path:"camp",component:CamPComponent},
+  {path:"flcamp",component:FlcamPComponent},
   {path:"",component:HomeComponent}
 ];
 

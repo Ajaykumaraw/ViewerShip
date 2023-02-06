@@ -26,6 +26,8 @@ import { ProfileComponent } from './profile/profile.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DailogDataPass } from './model/dialogDataPass';
 import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
+import { CamPComponent } from './cam-p/cam-p.component';
+import { FlcamPComponent } from './flcam-p/flcam-p.component';
 
 
 @NgModule({
@@ -44,6 +46,8 @@ import { BottomMenuComponent } from './bottom-menu/bottom-menu.component';
     MessageComponent,
     ProfileComponent,
     BottomMenuComponent,
+    CamPComponent,
+    FlcamPComponent,
   ],
   imports: [
     BrowserModule,

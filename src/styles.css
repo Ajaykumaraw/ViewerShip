@@ -17,6 +17,10 @@ body{
     --primary-color:rgb(57, 228, 205);
     --secondary-color:rgb(236, 54, 54);
 }
+::-webkit-scrollbar{
+    background: var(--secondary-color);
+    width: .4rem;
+}
 .button-btn{
     border: none;
     padding: 13px 22px;

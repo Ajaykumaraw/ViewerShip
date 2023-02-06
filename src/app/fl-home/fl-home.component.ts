@@ -811,7 +811,7 @@ export class FlHomeComponent implements OnInit {
         this.fetchChDataOnPageLoad();     
        //this.methodFetchLogin(); // <- Method to fetch token details contieusly
         // if(this.userChName === null || this.userChName === undefined){
-         //  this.openDialogNew();  --- > enable this for dialog
+           this.openDialogNew(); // --- > enable this for dialog
         // }
         
 

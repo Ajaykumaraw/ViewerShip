@@ -1,0 +1,108 @@
+.mkt-cmp{
+    width: 100%;
+    height: 90vh;
+}
+.content-box{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar{
+    width: 18%;
+    height: 90vh;
+}
+.mkt-camp{
+    width: 82%;
+    height: 90vh;
+}
+.crtcmp{
+    width: 50%;
+    height: 4rem;
+    margin: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.crtcmp button{
+    width: 30%;
+    height: 100%;
+    background: rgb(230, 221, 221);
+    outline: none;
+    border: none;
+    border-radius: .3rem;
+    color: rgb(46, 44, 44);
+    font-weight: bold;
+    box-shadow: rgb(184, 180, 180);
+    font-size: 1rem;
+    font-family:'Nunito', sans-serif;
+}
+.crtlable{
+    margin: .1rem 2rem;
+}
+.crtCmapFrm{
+    width: 90%;
+    height: 17rem;
+    margin: .2rem 2rem;
+    border: 1px solid lightgray;
+    border-radius: .3rem;
+}
+.crtCmapFrm form{
+    display: block;
+}
+.frtRow{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    margin: .5rem .1rem;
+    justify-content: space-around;
+}
+.sndRow{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    margin: .5rem .1rem;
+    justify-content: space-around;
+}
+.brdr{
+    border-radius: .3rem;
+    outline: none;
+    border: 1px solid lightgray;
+    padding-left: .4rem ;
+}
+.thdRow{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    margin: .5rem .1rem;
+    align-items: center;
+    padding: .1rem 3.5rem;
+    justify-content: space-between;
+}
+.prdIm{
+    display: block;
+}
+.in{
+    width: 2rem;
+    height: 1rem;
+    font-size: .7rem;
+}
+.paySt{
+    margin-right: 4rem;
+}
+.paySt button{
+    width: 15rem;
+    height: 3.6rem;
+    background: rgb(127, 211, 155);
+    outline: none;
+    border: none;
+    border-radius: .3rem;
+    color: rgb(15, 13, 13);
+    font-weight: bold;
+    box-shadow: rgb(184, 180, 180);
+    font-size: 1rem;
+    font-family:'Nunito', sans-serif;
+}

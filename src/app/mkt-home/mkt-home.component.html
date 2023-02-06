@@ -1,66 +1,75 @@
 <section class="mkt-section">
-    <div class="search-bar-section">
-        <div class="shape-section">
-          <input class="category-text" type="text" placeholder="Find channel with category">
-        </div>
-        <div class="search-btn-sec">
-          <button class="search-btn">Search</button>
-        </div> 
-    </div>
-    <div class="table-section">
-        <div class="row">
-            <div class="col-8 table-wrapper-scroll-y my-custom-scrollbar">
-                <table class="content-table table table table-bordered table-striped mb-0">
-                    <thead class="table-header">
-                      <tr> 
-                        <th class="t-heading-IC" scope="col">Channel Icon</th>
-                        <th class="t-heading" scope="col">User Name</th>
-                        <th class="t-heading" scope="col">Channel Name</th>
-                        <th class="t-heading" scope="col">Channel Id</th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-body">
-                      <tr class="table-row" *ngFor="let chdetails of chDetailsResponse_ ; let i = index" (click)="showChDetails(chdetails.chName,
-                      chdetails.userName,chdetails.userName)">
-                        <td><div class="thumbnail">
-                            <img src="{{chdetails.snippet.thumbnails.medium.url }}" alt="">
-                        </div></td>
-                        <td> {{chdetails.snippet.channelTitle | titlecase}}</td>
-                        <td> {{chdetails.snippet.channelTitle | titlecase}}</td>
-                        <td>{{chdetails.snippet.channelTitle | titlecase}}</td>
-                      </tr>
-                      <!-- working code need to implemented -->
-                            <!-- <img src="{{chdetails.userName }}" alt="">
-                          </div></td>
-                          <td> {{chdetails.userName | titlecase}}</td>
-                          <td> {{chdetails.chName | titlecase}}</td>
-                          <td>{{chdetails.channelId | titlecase}}</td>
-                        </tr> -->
-                      <!-- working code need to implemented -->
-                    </tbody>
-                  </table>
-            </div>
-            <div class="col-4">
-               <div class="outer-box">
-                    <div class="upper-inner-box">
-                        <div class="profile-thumbnail">
-                            <img src="{{chThumb}}" alt="">
-                        </div>       
-                        <h3 class="channel-name">{{chThumb}}</h3>   
-                    </div>
-                  <div class="lower-inner-box">
-                        <div class="subscriber-box">
-                          Subscriber<h4>{{chID}}</h4>
-                        </div>
-                        <div class="video-count-box">
-                          videos<h4>{{chID}}</h4>
-                        </div>
+  <div class="content-box">
+      <div class="sidebar">
+        <app-sidebar [role]="role"></app-sidebar>
+      </div>
+      <div class="mkt-content">
+            <div class="search-bar-section">
+              <div class="search-bar-inner">
+                  <div class="shape-section">
+                    <input class="category-text" type="text" placeholder="Find channel with category">
                   </div>
-               </div>
-            </div>
-        </div>
-    </div>
-    <div class="bottom-menu">
-      <app-bottom-menu></app-bottom-menu>
-  </div>
+                  <div class="search-btn-sec">
+                    <button class="search-btn">Search</button>
+                  </div> 
+              </div>
+          </div>
+          <div class="table-section">
+              <div class="row">
+                  <div class="col-8 table-wrapper-scroll-y my-custom-scrollbar">
+                      <table class="content-table table table table-bordered table-striped mb-0">
+                          <thead class="table-header">
+                            <tr> 
+                              <th class="t-heading-IC" scope="col">Channel Icon</th>
+                              <th class="t-heading" scope="col">User Name</th>
+                              <th class="t-heading" scope="col">Channel Name</th>
+                              <th class="t-heading" scope="col">Channel Id</th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-body">
+                            <tr class="table-row" *ngFor="let chdetails of chDetailsResponse_ ; let i = index" (click)="showChDetails(chdetails.chName,
+                            chdetails.userName,chdetails.userName)">
+                              <td><div class="thumbnail">
+                                  <img src="{{chdetails.snippet.thumbnails.medium.url }}" alt="">
+                              </div></td>
+                              <td> {{chdetails.snippet.channelTitle | titlecase}}</td>
+                              <td> {{chdetails.snippet.channelTitle | titlecase}}</td>
+                              <td>{{chdetails.snippet.channelTitle | titlecase}}</td>
+                            </tr>
+                            <!-- working code need to implemented -->
+                                  <!-- <img src="{{chdetails.userName }}" alt="">
+                                </div></td>
+                                <td> {{chdetails.userName | titlecase}}</td>
+                                <td> {{chdetails.chName | titlecase}}</td>
+                                <td>{{chdetails.channelId | titlecase}}</td>
+                              </tr> -->
+                            <!-- working code need to implemented -->
+                          </tbody>
+                        </table>
+                  </div>
+                  <div class="col-4">
+                    <div class="outer-box">
+                          <div class="upper-inner-box">
+                              <div class="profile-thumbnail">
+                                  <img src="{{chThumb}}" alt="">
+                              </div>       
+                              <h3 class="channel-name">{{chThumb}}</h3>   
+                          </div>
+                        <div class="lower-inner-box">
+                              <div class="subscriber-box">
+                                Subscriber<h4>{{chID}}</h4>
+                              </div>
+                              <div class="video-count-box">
+                                videos<h4>{{chID}}</h4>
+                              </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="bottom-menu">
+            <app-bottom-menu></app-bottom-menu>
+          </div>
+      </div>
+  </div>    
 </section>

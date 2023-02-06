@@ -15,6 +15,7 @@ export class MKTHomeComponent implements OnInit {
   chID!:string;
   chTitle!:string;
   mkt_token!:any;
+  role!:string;
 
 
   constructor(private service:ServiceService,private mktDataService:MktDataServiceService) { }
@@ -739,7 +740,7 @@ export class MKTHomeComponent implements OnInit {
     this.mkt_token = localStorage.getItem('utoken');
     console.log(this.mkt_token);
     this.fetchMktHomeData();
-    
+    this.role = "mkt";
   }
 
   showChDetails(thumb:string,channelTitle:string,channelId:string){

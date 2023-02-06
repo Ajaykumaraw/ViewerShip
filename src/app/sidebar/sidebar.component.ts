@@ -10,6 +10,7 @@ export class SidebarComponent implements OnInit {
 
   @Input() userName!:string;
   @Input() userChName!:string;
+  @Input() role!:string;
 
   nvlinks!:Element;
 
@@ -27,7 +28,13 @@ export class SidebarComponent implements OnInit {
   profile(){
     this.router.navigate(['/profile']);
   }
-
+  gotoCampagin(){
+    if(this.role==='mkt'){
+      this.router.navigate(['/camp']);
+    }else{
+      this.router.navigate(['/flcamp']);
+    }
+  }
 
 
 }

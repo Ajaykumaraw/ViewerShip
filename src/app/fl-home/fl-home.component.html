@@ -13,38 +13,44 @@
                     <app-sidebar class="fl-sidebar" [userName]="userName" [userChName]="userChName"></app-sidebar>
                 </div>
                 <div class="fl-home-container">
+                    <div class="fl-home-title">
+                        <p>Channel stats</p>
+                    </div>
                     <div class="fl-card-section">
                         <div class="ch-name fl-cards">
                             <div class="fl-card-content">
                                 <div class="ch-title">{{userChName}}</div>
-                                <div class="ch-title-lable">{{userChName}}</div>
+                                <div class="ch-title-lable">Channel Name</div>
                             </div>
                         </div>
                         <div class="ch-subCount fl-cards">
                             <div class="fl-card-content">
-                                <div class="ch-title">{{userChName}}</div>
-                                <div class="ch-title-lable">{{userChName}}</div>
+                                <div class="ch-title">378.5k</div>
+                                <div class="ch-title-lable">Subscribers</div>
                             </div>
                         </div>
                         <div class="ch-totalVd fl-cards">
                             <div class="fl-card-content">
-                                <div class="ch-title">{{userChName}}</div>
-                                <div class="ch-title-lable">{{userChName}}</div>
+                                <div class="ch-title">118</div>
+                                <div class="ch-title-lable">Videos</div>
                             </div>
                         </div>
                         <div class="ch-createdOn fl-cards">
                             <div class="fl-card-content">
-                                <div class="ch-title">{{userChName}}</div>
-                                <div class="ch-title-lable">{{userChName}}</div>
+                                <div class="ch-title">22-jan-2019</div>
+                                <div class="ch-title-lable">Created on</div>
                             </div>
                         </div>
                     </div>
                     <div class="ch-vd-section">
+                        <div class="vd-sec-title">
+                            <p>Channel videos</p>
+                        </div>
                          <div class="content-sec">
                             <div class="row vd-detail-sec">
                                 <div class="col-auto vd-sect" *ngFor="let chdetails of chDetailsResponse; let i = index">
                                     <img class="vid-thumb" src="{{chdetails.snippet.thumbnails.high.url}}" alt="">
-                                    <label for="vd-title">{{chdetails.snippet.title | titlecase}}</label>
+                                    <label class="vd-title" for="vd-title">{{chdetails.snippet.title | titlecase}}</label>
                                 </div>
                             </div>
                         </div>
